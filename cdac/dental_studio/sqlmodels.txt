@@ -1,0 +1,33 @@
+BEGIN;
+--
+-- Create model Appointment
+--
+CREATE TABLE "dental_studio_appointment" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "appt_datetime" datetime NOT NULL, "appt_by_name" varchar(50) NOT NULL UNIQUE, "appt_contact" varchar(12) NOT NULL UNIQUE, "appt_email" varchar(50) NOT NULL UNIQUE, "appt_address" varchar(300) NOT NULL, "appt_age" integer NOT NULL, "appt_gender" varchar(1) NOT NULL);
+--
+-- Create model Patient
+--
+CREATE TABLE "dental_studio_patient" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "patient_fname" varchar(30) NOT NULL UNIQUE, "patient_lname" varchar(30) NOT NULL UNIQUE, "patient_contact" varchar(12) NOT NULL UNIQUE, "patient_email" varchar(50) NOT NULL UNIQUE, "patient_address" varchar(300) NOT NULL, "patient_age" integer NOT NULL, "first_appt_date" datetime NOT NULL, "gender" varchar(1) NOT NULL);
+--
+-- Create model Testimonial
+--
+CREATE TABLE "dental_studio_testimonial" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "content" varchar(2000) NOT NULL, "created_date" datetime NOT NULL, "user" varchar(50) NOT NULL UNIQUE);
+--
+-- Create model Treatment
+--
+CREATE TABLE "dental_studio_treatment" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "treatment_name" varchar(200) NOT NULL UNIQUE, "treatment_description" varchar(500) NOT NULL, "treatment_cost" integer NOT NULL);
+--
+-- Create model Visit
+--
+CREATE TABLE "dental_studio_visit" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "visited_date" datetime NOT NULL, "comments" varchar(2000) NOT NULL, "appointment_id" integer NOT NULL REFERENCES "dental_studio_appointment" ("id"), "patient_id" integer NOT NULL REFERENCES "dental_studio_patient" ("id"), "treatment_id" integer NOT NULL REFERENCES "dental_studio_treatment" ("id"));
+--
+-- Add field treatment to appointment
+--
+ALTER TABLE "dental_studio_appointment" RENAME TO "dental_studio_appointment__old";
+CREATE TABLE "dental_studio_appointment" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "appt_datetime" datetime NOT NULL, "appt_by_name" varchar(50) NOT NULL UNIQUE, "appt_contact" varchar(12) NOT NULL UNIQUE, "appt_email" varchar(50) NOT NULL UNIQUE, "appt_address" varchar(300) NOT NULL, "appt_age" integer NOT NULL, "appt_gender" varchar(1) NOT NULL, "treatment_id" integer NOT NULL REFERENCES "dental_studio_treatment" ("id"));
+INSERT INTO "dental_studio_appointment" ("appt_gender", "appt_age", "appt_datetime", "appt_by_name", "treatment_id", "appt_address", "appt_email", "id", "appt_contact") SELECT "appt_gender", "appt_age", "appt_datetime", "appt_by_name", NULL, "appt_address", "appt_email", "id", "appt_contact" FROM "dental_studio_appointment__old";
+DROP TABLE "dental_studio_appointment__old";
+CREATE INDEX "dental_studio_visit_appointment_id_820b1da7" ON "dental_studio_visit" ("appointment_id");
+CREATE INDEX "dental_studio_visit_patient_id_80035fca" ON "dental_studio_visit" ("patient_id");
+CREATE INDEX "dental_studio_visit_treatment_id_5dda3b9c" ON "dental_studio_visit" ("treatment_id");
+CREATE INDEX "dental_studio_appointment_treatment_id_b363466c" ON "dental_studio_appointment" ("treatment_id");
+COMMIT;
