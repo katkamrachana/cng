@@ -1,5 +1,3 @@
-from django.conf.urls import patterns, url
-
-urlpatterns = patterns('cdac.dental_studio.views.home',
-                url(r'^', 'welcome', name='welcome'),
-                )
+from django.conf.urls import url
+from dental_studio.views import home
+urlpatterns = [url(r'^', home.welcome, name='welcome'),]
