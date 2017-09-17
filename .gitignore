@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.py[co]
+
+# Django stuff:
+*.log
+*.pot
+
+bower_components/
+*.db
+
+# Translations
+*.mo
+*.po
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+*~
