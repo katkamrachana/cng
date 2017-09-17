@@ -19,5 +19,9 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 *~
-db*
-dental_studio/migrations*
+bng
+*.sqlite3
+migrations/
+db.sqlite3
+/static
+.DS_Store
