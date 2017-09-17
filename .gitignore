@@ -19,3 +19,5 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 *~
+db*
+dental_studio/migrations*
