@@ -4,8 +4,8 @@ from dental_studio.views import home
 
 urlpatterns = [
     url(r'^$', home.welcome, name='welcome'),
-    url(r'^appointment/', include('dental_studio.urls.appointment')),
-    url(r'^visit/', include('dental_studio.urls.visit')),
-    url(r'^treatment/', include('dental_studio.urls.treatment')),
+    url(r'^appointment/', include('dental_studio.urls.appointment', namespace='appointment')),
+    url(r'^visit/', include('dental_studio.urls.visit', namespace='visit')),
+    url(r'^treatment/', include('dental_studio.urls.treatment', namespace='treatment')),
     url(r'^patient/', include('dental_studio.urls.patient', namespace='patient')),
 ]

@@ -33,12 +33,12 @@ class PatientAdmin(admin.ModelAdmin):
     list_display = ('__unicode__', 'contact', 'address', 'email', 'age' )
 
 class Treatment(models.Model):
-    treatment_name = models.CharField(max_length=200, unique=True, blank=False)
-    treatment_description = models.CharField(max_length=500)
-    treatment_cost = models.IntegerField(default=0, blank=False)
+    name = models.CharField(max_length=200, unique=True, blank=False)
+    description = models.CharField(max_length=500)
+    cost = models.IntegerField(default=0, blank=False)
 
     def __unicode__(self):
-        return self.treatment_name
+        return self.name
 
 
 
