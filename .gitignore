@@ -23,5 +23,5 @@ bng
 *.sqlite3
 migrations/
 db.sqlite3
-/static
+/static/bower_components/
 .DS_Store
