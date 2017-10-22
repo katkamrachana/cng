@@ -44,16 +44,12 @@ ul.menu-list
 .content-container{
 	margin-top: 4.5%;
     }
-    body {
-        background-color: lightblue;}
 }
 
 @media screen and (max-width:2560px){
 .content-container{
 	margin-top: 4%;
     }
-    body {
-        background-color: lightblue;}
 }
 
 
@@ -77,10 +73,6 @@ ul.menu-list
 	.menu-bar{
 		height: 85px;
 	} 
-
-    body {
-        background-color: green;
-    }
 }
 
 @media screen and (max-width: 420px){
@@ -88,12 +80,8 @@ ul.menu-list
 		margin-top: 17%;
 	}
 	.menu-bar{
-
-	height: 60px; 
-}
-    body {
-        background-color: lightblue;
-    }
+		height: 60px; 
+	}
 }
 
 
