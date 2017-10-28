@@ -15,18 +15,14 @@ ul.navbar-nav > li.active{
 	margin: 2px 2px 2px 2px;
 }
 
-ul.menu-list
-	{
-	margin-top: 17px; 
-	> li{
-	.active{		
+ul.menu-list > li.active-menu{
     border-bottom: 2px solid;
-    border-color: darkolivegreen;}
-	> a {
-		font-size: 20px; color: black;
-		color: #000000;
-	 }
-	}
+    border-color: #306769;
+}
+
+li.menu-item > a{
+	font-size: 17px; color: black;
+	color: #000000;
 }
 .meta-info{
     margin-top: 38px;
@@ -35,8 +31,9 @@ ul.menu-list
 
 .menu-bar{
 	height: 60px; 
-	/*background-color: #5ad4da;*/
-	background-color: lightblue;
+	background-color: #5ad4da;
+	/*background-color: #CAEBF2;*/
+	/*background-color: #79d7ea;*/
 	font-size: 15px;
 }
 
@@ -48,7 +45,7 @@ ul.menu-list
 
 @media screen and (max-width:2560px){
 .content-container{
-	margin-top: 4%;
+	margin-top: 5%;
     }
 }
 
@@ -93,3 +90,40 @@ ul.menu-list
         background-color: lightblue;
     }
 }*/
+
+/*.active-menu{
+	border-bottom: 2px solid #1c7b9c;
+}
+*/
+/*.menu-item{
+	border-right: 2px solid #1c7b9c;
+}*/
+
+.sitelogo{
+    width: 40px !important;
+    margin-top: -6px !important;
+        margin-left: -153px;
+}
+
+/*.site-fullname{
+    margin-top: -40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: -105px;
+    font-size: 23px;
+}
+*/
+.site-primary-name{
+    margin-top: -48px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: -105px;
+    font-size: 20px;
+}
+.site-sec-name{
+    margin-top: -11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: -105px;
+    font-size: 18px;
+}
