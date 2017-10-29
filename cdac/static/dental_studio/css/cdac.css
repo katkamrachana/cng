@@ -31,9 +31,13 @@ li.menu-item > a{
 
 .menu-bar{
 	height: 60px; 
-	background-color: #5ad4da;
+	/*background-color: #5ad4da;*/
+	/*background-color: #5ffff7;*/
 	/*background-color: #CAEBF2;*/
 	/*background-color: #79d7ea;*/
+	/*background-color: #57e3ff;*/
+	/*background-color: #ffa704;*/
+	background-color: #fcc369; /*mustard color*/
 	font-size: 15px;
 }
 
@@ -105,16 +109,13 @@ li.menu-item > a{
         margin-left: -153px;
 }
 
-/*.site-fullname{
-    margin-top: -40px;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-left: -105px;
-    font-size: 23px;
+.site-fullname{
+	color: #306769;
 }
-*/
+
 .site-primary-name{
-    margin-top: -48px;
+	color: #306769;
+    margin-top: -39px;
     text-transform: uppercase;
     font-weight: bold;
     margin-left: -105px;
@@ -122,8 +123,16 @@ li.menu-item > a{
 }
 .site-sec-name{
     margin-top: -11px;
+	color: #306769;
     text-transform: uppercase;
     font-weight: bold;
     margin-left: -105px;
     font-size: 18px;
+}
+
+.cta-type1{
+	color: #ff5136 !important;
+    font-size: 17px;
+    text-decoration: underline;
+    font-weight: bold;
 }
