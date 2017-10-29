@@ -1,13 +1,10 @@
 
-div.nav-header{
+/*div.nav-header{
 	margin-top: 20px;
 	background-color: white;
     font-size: 18px;
 }
-
-ul.navbar-nav > li.active{
-}
-
+*/
 .lbl-info{
 	/*background-color: #5ad4da;*/
 	background-color: lightblue;
@@ -21,8 +18,8 @@ ul.menu-list > li.active-menu{
 }
 
 li.menu-item > a{
-	font-size: 17px; color: black;
-	color: #000000;
+	font-size: 17px; 
+	color: #234b4c !important;
 }
 .meta-info{
     margin-top: 38px;
@@ -41,50 +38,161 @@ li.menu-item > a{
 	font-size: 15px;
 }
 
-@media screen and (max-width:1600px){
-.content-container{
-	margin-top: 4.5%;
-    }
+
+.sitelogo{
+    width: 40px;
+    margin-top: -6px;
+    margin-left: -153px;
+}
+
+.site-fullname{
+	color: #306769;
+}
+
+.site-primary-name{
+	color: #2c5556;
+    margin-top: -39px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: -105px;
+    font-size: 20px;
+}
+.site-sec-name{
+    margin-top: -11px;
+	color: #2c5556;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: -105px;
+    font-size: 18px;
+}
+
+
+.cta-type1 {
+    color: #2c5556 !important;
+    font-size: 20px;
+    text-decoration: underline;
+    font-weight: bold;
+    text-shadow: -1px 0 gold, 0 1px gold, 1px 0 gold, 0 -1px gold;
+}
+
+
+/*@media screen and (max-width:1600px){
 }
 
 @media screen and (max-width:2560px){
-.content-container{
-	margin-top: 5%;
-    }
 }
-
+*/
 
 @media screen and (max-width: 1440px) {
-	.content-container{
-		margin-top: 6%;
-	}
-}
-
-@media screen and (max-width: 1370px) {
-	.content-container{
-		margin-top: 6%;
-	}
-}
-
-
-@media screen and (max-width: 1200px) {
-	.content-container{
-		margin-top: 9%;
-	}
 	.menu-bar{
 		height: 85px;
 	} 
+	.menu-list , .right-menu-item{
+		margin-top: 12px;
+	}
+	.sitelogo {
+	    width: 60px;
+	    margin-top: 0px;
+	    margin-left: -96px;
+	}
+	.site-primary-name {
+		margin-left: -35px;
+	    font-size: 28px;
+	    margin-top: -52px;
+	}
+	.site-sec-name{
+		margin-left: -35px;
+	    font-size: 27px;
+	    margin-top: -3px;
+	}
+
 }
 
-@media screen and (max-width: 420px){
-	.content-container{
-		margin-top: 17%;
+@media screen and (max-width: 1024px) {
+	.menu-bar{
+		height: 85px;
+	} 
+	.menu-list , .right-menu-item{
+		margin-top: 10px;
 	}
+	.sitelogo {
+	    width: 45px;
+	    margin-top: 0px;
+	    margin-left: -28px;
+	}
+	.site-primary-name {
+	    margin-left: 22px;
+	    font-size: 24px;
+	}
+	.site-sec-name{
+    margin-left: 20px;
+    font-size: 22px;
+	}
+
+}
+@media screen and (max-width: 800px){
+
+	.sitelogo{
+	    width: 45px;
+	    margin-top: -2px;
+	    margin-left: -15px;
+	}
+	.site-primary-name{
+	    margin-left: 30px;
+	}
+	.site-sec-name{
+	    margin-left: 30px;
+	}
+
+}
+@media screen and (max-width: 640px){
 	.menu-bar{
 		height: 60px; 
 	}
+	.sitelogo{
+	    width: 40px;
+	    margin-top: -6px;
+	    margin-left: -8px;
+	}
 }
 
+
+@media screen and (max-width: 420px){
+	.menu-bar{
+		height: 60px; 
+	}
+	.sitelogo{
+	    width: 45px;
+	    margin-left: -8px;
+	    margin-top: -5px;
+	}
+	.site-primary-name {
+	    margin-left: 40px;
+	    font-size: 22px;
+	}
+	.site-sec-name{
+	    margin-left: 39px;
+	    font-size: 20px;
+	}
+}
+
+
+@media screen and (max-width: 320px){
+	.sitelogo{
+	    width: 40px;
+	    margin-top: -6px;
+	    margin-left: -8px;
+	}
+	.site-primary-name {
+	    margin-left: 40px;
+	    font-size: 20px;
+	}
+	.site-sec-name{
+	    margin-left: 39px;
+	    font-size: 19px;
+	}
+
+}
 
 /*.navbar{
 	    height: -2px !important;
@@ -102,37 +210,3 @@ li.menu-item > a{
 /*.menu-item{
 	border-right: 2px solid #1c7b9c;
 }*/
-
-.sitelogo{
-    width: 40px !important;
-    margin-top: -6px !important;
-        margin-left: -153px;
-}
-
-.site-fullname{
-	color: #306769;
-}
-
-.site-primary-name{
-	color: #306769;
-    margin-top: -39px;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-left: -105px;
-    font-size: 20px;
-}
-.site-sec-name{
-    margin-top: -11px;
-	color: #306769;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-left: -105px;
-    font-size: 18px;
-}
-
-.cta-type1{
-	color: #ff5136 !important;
-    font-size: 17px;
-    text-decoration: underline;
-    font-weight: bold;
-}
