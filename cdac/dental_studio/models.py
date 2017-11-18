@@ -27,11 +27,12 @@ class Patient(models.Model):
         """Return the list of all Patients."""
         return Patient.objects.all()
 
-
 class PatientAdmin(admin.ModelAdmin):
     raw_id_fields = ('first_name','last_name') 
     search_fields = ('first_name', 'last_name')
     list_display = ('__unicode__', 'contact', 'address', 'email', 'age' )
+
+
 
 class Treatment(models.Model):
     name = models.CharField(max_length=200, unique=True, blank=False)
@@ -68,6 +69,13 @@ class Appointment(models.Model):
     def appointments():
         """Return the list of all Patients."""
         return Appointment.objects.all()
+
+    # def clean_date(self):
+    #     date = self.cleaned_data['datetime']
+    #     if date < datetime.date.today():
+    #         raise forms.ValidationError("The date cannot be in the past!")
+    #     return date
+
 
 class Visit(models.Model):
     visited_date = models.DateTimeField(blank=False)

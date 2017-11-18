@@ -225,6 +225,9 @@ li.menu-item > a{
 
 /*Need to recheck template css*/
   body {
+  overflow-x: hidden;
+  height: 100%;
+
     font: 400 15px Lato, sans-serif;
     line-height: 1.8;
     color: #818181;
@@ -428,9 +431,6 @@ li.menu-item > a{
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
  */
 
- body {
-  overflow-x: hidden;
-}
 
 #wrapper {
   padding-left: 0;
@@ -543,4 +543,13 @@ li.menu-item > a{
     position: relative;
     margin-right: 0;
   }
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
 }

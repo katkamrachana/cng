@@ -10,21 +10,21 @@
           <a id="admin_dashboard" href="{% url 'laod_dashboard' %}">Dashboard</a>
         </li>
         <li>
-          <a id="appt_dashboard" href="#">Appointments</a>
+          <a id="appt_dashboard" href="{% url 'appointment:laod_table' %}">Appointments</a>
         </li>
         <li>
-          <a id="patients_dashboard" href="#">Patients</a>
+          <a id="patients_dashboard" href="{% url 'patient:laod_table' %}">Patients</a>
         </li>
         <li>
-          <a id="visits_dashboard" href="#"> Visits</a>
+          <a id="visits_dashboard" href="{% url 'visit:laod_table' %}"> Visits</a>
         </li>
         <li>
-          <a id="visits_dashboard" href="#"> Treatments</a>
+          <a id="visits_dashboard" href="{% url 'treatment:laod_table' %}"> Treatments</a>
         </li>
-        <li>
-          <a id="testimonials_dashboard" href="#"> Testimonials</a>
+<!--         <li>
+          <a id="testimonials_dashboard" href="{% url 'testimonial:laod_table' %}"> Testimonials</a>
         </li>
-      </ul>
+ -->      </ul>
     </div>
     <div class="content-area">
       {% block dashboard_content %}

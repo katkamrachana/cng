@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^visit/', include('dental_studio.urls.visit', namespace='visit')),
     url(r'^treatment/', include('dental_studio.urls.treatment', namespace='treatment')),
     url(r'^patient/', include('dental_studio.urls.patient', namespace='patient')),
+    url(r'^testimonial/', include('dental_studio.urls.testimonial', namespace='testimonial')),
 ]

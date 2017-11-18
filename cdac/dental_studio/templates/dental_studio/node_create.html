@@ -1,3 +1,14 @@
-{{title}}
+{% extends "dental_studio/base.html" %}
+{% load material_form %} 
+{% load staticfiles material_form %}
+{% block body %}
+<div class="form-container" style="margin: 100px 0px 0px 75px; width: 50%;">
+	 {{ form.non_field_errors }}
+	<form method="POST" class="viewform" action="{% url action_url %}">{% csrf_token %}
+		{% form form=form %}{% endform %}
+		<button type="submit" name="_submit" class="btn btn-primary btn-lg">Submit</button>
+	</form>
 
-{{form.as_p}}
+</div>
+{% endblock %}
+

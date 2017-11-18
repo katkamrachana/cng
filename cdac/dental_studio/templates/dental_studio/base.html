@@ -1,5 +1,5 @@
 {% load i18n %}
-
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +17,12 @@
   <!-- font-awesome icons -->
   <link rel="stylesheet" href="/static/dental_studio/bower_components/font-awesome/css/font-awesome.min.css">
 
+
+{% include 'material/includes/material_css.html' %}
+    <script src="{% static 'material/js/jquery.js' %}"></script>
+    {% include 'material/includes/material_js.html' %}
+
+
   {% block head %}
 
   <style>
@@ -28,7 +34,6 @@
 <body  itemscope itemtype="http://schema.org/Webpage" id="base-cng" data-spy="scroll" data-target=".navbar" data-offset="60">
   {% include "dental_studio/header.html" %}
   {% block body %}{% endblock %}
-  {% include "dental_studio/footer.html" %}
 <script type="text/javascript">
 
   $(window).scroll(function() {
@@ -53,4 +58,5 @@
 </script>
 
 </body>
+  {% include "dental_studio/footer.html" %}
 </html>
