@@ -1,188 +1,36 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="utf-8" />
-    <link rel="shortcut icon" href="/static/dental_studio//imgages/favicon.ico" type="image/x-icon">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>Management Information System</title>
-	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
-    <!--   Core JS Files   -->
-  <script src="/static/dental_studio/bower_components/jquery/jquery.min.js"></script>
-
-  <script src="/static/dental_studio/bower_components/bootstrap/dist/js/bootstrap.min.js"  ></script>
-
-    <!-- Bootstrap core CSS     -->
-    <link href="/static/dental_studio/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-</head>
-<body>
-
-<div class="wrapper">
-    <div class="sidebar" data-background-color="white" data-active-color="success">
-
-    <!--
-		data-active-color="primary | info | success | warning | danger"
-	-->
-
-    	<div class="sidebar-wrapper">
-            <div class="logo">
-                <h3>Dr. Laxmi</h3>
-            </div>
-
-            <ul class="nav">
-                <li class="active">
-                    <a href="dashboard.html">
-                        <i class="ti-panel"></i>
-                        <p>Dashboard</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="table.html">
-                        <i class="ti-view-list-alt"></i>
-                        <p>Appointments</p>
-                    </a>
-                </li>
-            </ul>
-    	</div>
+{% extends "dental_studio/base.html" %}
+{% block body %}
+<div class="dashboard-panel" style="margin: 75px 0px 0px 30px;">
+  <h2>Dr. Rajlaxmi Katkam Ghone</h2>
+  <div id="wrapper" class="active toggled">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li>
+          <a id="admin_dashboard" href="{% url 'laod_dashboard' %}">Dashboard</a>
+        </li>
+        <li>
+          <a id="appt_dashboard" href="#">Appointments</a>
+        </li>
+        <li>
+          <a id="patients_dashboard" href="#">Patients</a>
+        </li>
+        <li>
+          <a id="visits_dashboard" href="#"> Visits</a>
+        </li>
+        <li>
+          <a id="visits_dashboard" href="#"> Treatments</a>
+        </li>
+        <li>
+          <a id="testimonials_dashboard" href="#"> Testimonials</a>
+        </li>
+      </ul>
+    </div>
+    <div class="content-area">
+      {% block dashboard_content %}
+      {% endblock %}
     </div>
 
-<!--     <div class="main-panel">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar bar1"></span>
-                        <span class="icon-bar bar2"></span>
-                        <span class="icon-bar bar3"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Dashboard</a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <a href="#">
-						<i class="ti-settings"></i>
-						<p>Settings</p>
-                    </a>
-                </div>
-            </div>
-        </nav>
-
-
-        <div class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="card">
-                            <div class="content">
-                                <div class="row">
-                                    <div class="col-xs-5">
-                                        <div class="icon-big icon-warning text-center">
-                                            <i class="ti-server"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-7">
-                                        <div class="numbers">
-                                            <p>Capacity</p>
-                                            105GB
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="footer">
-                                    <hr />
-                                    <div class="stats">
-                                        <i class="ti-reload"></i> Updated now
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="card">
-                            <div class="content">
-                                <div class="row">
-                                    <div class="col-xs-5">
-                                        <div class="icon-big icon-success text-center">
-                                            <i class="ti-wallet"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-7">
-                                        <div class="numbers">
-                                            <p>Revenue</p>
-                                            $1,345
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="footer">
-                                    <hr />
-                                    <div class="stats">
-                                        <i class="ti-calendar"></i> Last day
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="card">
-                            <div class="content">
-                                <div class="row">
-                                    <div class="col-xs-5">
-                                        <div class="icon-big icon-danger text-center">
-                                            <i class="ti-pulse"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-7">
-                                        <div class="numbers">
-                                            <p>Errors</p>
-                                            23
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="footer">
-                                    <hr />
-                                    <div class="stats">
-                                        <i class="ti-timer"></i> In the last hour
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="card">
-                            <div class="content">
-                                <div class="row">
-                                    <div class="col-xs-5">
-                                        <div class="icon-big icon-info text-center">
-                                            <i class="ti-twitter-alt"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-7">
-                                        <div class="numbers">
-                                            <p>Followers</p>
-                                            +45
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="footer">
-                                    <hr />
-                                    <div class="stats">
-                                        <i class="ti-reload"></i> Updated now
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-
-                </div>
-            </div>
-        </div>
-    </div>
- -->
+  </div>
 </div>
-
-
-</body>
-
-
-</html>
+{% endblock %}

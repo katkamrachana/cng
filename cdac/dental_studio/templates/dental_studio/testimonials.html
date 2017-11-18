@@ -44,10 +44,12 @@
   $(document).on('click','.load-testimonials',function(){
     $(".testimonial-copy").removeClass("hide");
     $(this).text("See Less").removeClass("load-testimonials").addClass("hide-testimonials")
+    $(this).href("#testimonials")
   })
 
   $(document).on('click','.hide-testimonials',function(){
     $(".testimonial-copy").addClass("hide");
     $(this).text("Read More ..").removeClass("hide-testimonials").addClass("load-testimonials")
+    $(this).href("#testimonials")
   })
 </script>

@@ -22,7 +22,8 @@ class Patient(models.Model):
     def __unicode__(self):
         return self.first_name + ' ' + self.last_name
 
-    def patients(self):
+    @staticmethod
+    def patients():
         """Return the list of all Patients."""
         return Patient.objects.all()
 
@@ -39,6 +40,11 @@ class Treatment(models.Model):
 
     def __unicode__(self):
         return self.name
+
+    @staticmethod
+    def treatments():
+        """Return the list of all Patients."""
+        return Treatment.objects.all()
 
 
 
@@ -58,6 +64,11 @@ class Appointment(models.Model):
     def __unicode__(self):
         return '%s (%s) - %s' % (self.name, self.contact, self.datetime)
 
+    @staticmethod
+    def appointments():
+        """Return the list of all Patients."""
+        return Appointment.objects.all()
+
 class Visit(models.Model):
     visited_date = models.DateTimeField(blank=False)
     comments = models.CharField(max_length=2000)
@@ -68,8 +79,19 @@ class Visit(models.Model):
     def __unicode__(self):
         return '%s - %s' % (self.patient.first_name, self.visited_date)
 
+    @staticmethod
+    def visits():
+        """Return the list of all Patients."""
+        return Visit.objects.all()
+
+
 class Testimonial(models.Model):
     content = models.CharField(max_length=2000)
     created_date = models.DateTimeField()
     user = models.CharField(max_length=50, unique=True)
+
+    @staticmethod
+    def testimonials():
+        """Return the list of all Patients."""
+        return Testimonial.objects.all()
 
