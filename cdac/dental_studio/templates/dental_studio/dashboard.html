@@ -1,0 +1,26 @@
+{% extends "dental_studio/management.html" %}
+{% block dashboard_content %}
+<div class="container-fluid">
+  <div class="record-set">
+    <div class="row">
+      <div class="col-sm-3">
+        <h4><i class="fa fa-hospital-o" aria-hidden="true" style="color: red;"></i> Appointment </h4>
+        <p>Total Count: {{appointments_count|default_if_none:"0"}} </p>
+      </div>      
+      <div class="col-sm-3">
+        <h4><i class="fa fa-user" aria-hidden="true" style="color: red;"></i> Patients </h4>
+        <p>Total Count: {{patients_count|default_if_none:"0"}} </p>
+      </div>      
+      <div class="col-sm-3">
+        <h4><i class="fa fa-hospital-o" aria-hidden="true" style="color: red;"></i> Visits </h4>
+        <p>Total Count: {{visits_count|default_if_none:"0"}} </p>
+      </div>      
+      <div class="col-sm-3">
+        <h4><i class="fa fa-medkit" aria-hidden="true" style="color: red;"></i> Treatments </h4>
+        <p>Total Count: {{treatments_count|default_if_none:"0"}} </p>
+      </div>      
+    </div>
+  </div>
+</div>
+{% endblock %}
+
