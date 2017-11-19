@@ -1,44 +1,23 @@
-      <div style="height: 300px; overflow-x: auto; margin-top: 2%; overflow-y: auto; overflow-x: hidden;" id="testimonials">
-        <div class="row">
-          <div class="col-sm-2 text-center">
-            <img src="/static/dental_studio/images/profile.jpg" class="img-circle" alt="Bird" width="100px">
-          </div>        
-          <div class="col-sm-10">
-            <h4><i>Fantastic service</i></h4>
-            <p>I was in hurry and had a bad toothache and i found the clinic but it was closed. I contacted the doctor and informed about the severe pain and she was came in 10 minutes and made me calm at first and provided the treatment.  </p>
-          </div>        
-        </div>
-        <div class="row">
-          <div class="col-sm-2 text-center">
-            <img src="/static/dental_studio/images/profile.jpg" class="img-circle" alt="Bird" width="100px">
-          </div>        
-          <div class="col-sm-10">
-            <h4><i>Fantastic service</i></h4>
-            <p>I was in hurry and had a bad toothache and i found the clinic but it was closed. I contacted the doctor and informed about the severe pain and she was came in 10 minutes and made me calm at first and provided the treatment.  </p>
-          </div>        
-        </div>
-        <div class="row testimonial-copy hide">
-          <div class="col-sm-2 text-center">
-            <img src="/static/dental_studio/images/profile.jpg" class="img-circle" alt="Bird" width="100px">
-          </div>        
-          <div class="col-sm-10">
-            <h4><i>Fantastic service</i></h4>
-            <p>I was in hurry and had a bad toothache and i found the clinic but it was closed. I contacted the doctor and informed about the severe pain and she was came in 10 minutes and made me calm at first and provided the treatment.  </p>
-          </div>        
-        </div>
-        <div class="row testimonial-copy hide">
-          <div class="col-sm-2 text-center">
-            <img src="/static/dental_studio/images/profile.jpg" class="img-circle" alt="Bird" width="100px">
-          </div>        
-          <div class="col-sm-10">
-            <h4><i>Fantastic service</i></h4>
-            <p>I was in hurry and had a bad toothache and i found the clinic but it was closed. I contacted the doctor and informed about the severe pain and she was came in 10 minutes and made me calm at first and provided the treatment.  </p>
-          </div>        
-        </div>
+{% load get_testimonials from cdac_tags %}
+
+      <div style="height: 450px; overflow-x: auto; margin-top: 2%; overflow-y: auto; overflow-x: hidden;" id="testimonials">
+        {% get_testimonials as all_testimonials %}
+
+        {% for each_testimonials in all_testimonials %}
+          <div class="row">
+            <div class="col-sm-2 text-center">
+              <img src="/static/dental_studio/images/profile.jpg" class="img-circle" alt="Bird" width="100px">
+            </div>        
+            <div class="col-sm-10">
+              <h4><i>Fantastic service</i></h4>
+              <p>{{each_testimonials}}</p>
+            </div>        
+          </div>
+        {% endfor %}
+
         <div class="row text-center">
         <a href="#" class="load-testimonials">Read More ..</a>
         </div>
-
       </div>
 <script type="text/javascript">
   $(document).on('click','.load-testimonials',function(){

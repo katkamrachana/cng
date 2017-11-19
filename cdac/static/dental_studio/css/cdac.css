@@ -213,7 +213,7 @@ li.menu-item > a{
 .dr-title{
     color: #2c5556;
     text-transform: uppercase;
-    font-size: 30px;
+    /*font-size: 30px;*/
     font-weight: bold;
 }
 
@@ -274,6 +274,9 @@ li.menu-item > a{
     width: 100%;
     height: 100%;
     margin-bottom: 10px;
+  }
+  .carousel{
+    height: 100% !important;
   }
   .carousel-control.right, .carousel-control.left {
     background-image: none;
@@ -424,7 +427,9 @@ li.menu-item > a{
     margin-top: 10%;
   }
 
-
+#home{
+  margin-bottom: 0px !important;
+}
 /*!
  * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
  * Copyright 2013-2017 Start Bootstrap

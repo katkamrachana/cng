@@ -9,6 +9,7 @@
 			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 			<li data-target="#myCarousel" data-slide-to="1"></li>
 			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
 		</ol>
 
 		<!-- Wrapper for slides -->
@@ -43,8 +44,16 @@
 </div>
 
 
+
+<!-- Container (Treatments Section) -->
+<!-- <div id="services" class="container-fluid text-center" style="background-color: linen;"> -->
+<div id="services" class="container-fluid text-center" style="background-color: #1abb7d70; height: 600px; padding-top: 20px;">
+	<h4>Dental Services</h4>
+	{% include "dental_studio/services.html" %}
+</div>
+
 <!-- Testimonials (About Section) -->
-<div id="testimonials" class="container-fluid" style="background-color: #d4e9fb;">
+<div id="testimonials" class="container-fluid" style="background-color: #fabb70; height: 600px; padding-top: 20px;">
 
 	<div class="col-sm-8">
 		<h3>Testimonials</h3>
@@ -152,15 +161,8 @@
 	</div>
 </div>
 
-<!-- Container (Treatments Section) -->
-<!-- <div id="services" class="container-fluid text-center" style="background-color: linen;"> -->
-<div id="services" class="container-fluid text-center">
-	<h2>Dental Services</h2>
-	{% include "dental_studio/services.html" %}
-</div>
-
 <!-- <div id="about" class="container-fluid"  style="background-color: #bfd9d2;"> #51babf61;-->
-<div id="about" class="container-fluid"  style="background-color: #83c3c77a ">
+<div id="about" class="container-fluid"  style="background-color: #83c3c77a; height: 600px; padding-top: 40px;">
 
 	{% include "dental_studio/profile.html" %}
 </div>
