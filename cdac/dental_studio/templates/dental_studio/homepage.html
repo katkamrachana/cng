@@ -47,134 +47,140 @@
 
 <!-- Container (Treatments Section) -->
 <!-- <div id="services" class="container-fluid text-center" style="background-color: linen;"> -->
-<div id="services" class="container-fluid text-center" style="background-color: #1abb7d70; height: 600px; padding-top: 20px;">
-	<h4>Dental Services</h4>
-	{% include "dental_studio/services.html" %}
-</div>
-
-<!-- Testimonials (About Section) -->
-<div id="testimonials" class="container-fluid" style="background-color: #fabb70; height: 600px; padding-top: 20px;">
-
-	<div class="col-sm-8">
-		<h4>Testimonials</h4>
-		{% include "dental_studio/testimonials.html" %}
+	<div id="services" class="container-fluid text-center" style="background-color: #1abb7d70; height: 600px; padding-top: 20px;">
+		<h4>Dental Services</h4>
+		{% include "dental_studio/services.html" %}
 	</div>
 
-	<div class="col-sm-4">
-		<h4>Take your SMILE Test</h4>
-		<div class="col-md-8" id="main">
+	<!-- Testimonials (About Section) -->
+	<div id="testimonials" class="container-fluid" style="background-color: #fabb70; height: 600px; padding-top: 20px;">
 
-			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
-
-				<div class="panel panel-default">
-					<div class="panel-heading" role="tab" id="headingTwo">
-						<h4 class="panel-title">
-							<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-								Are you happy with your smile ?
-							</a>
-						</h4>
-					</div>
-					<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-						<div class="panel-body">
-							Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia 
-						</div>
+		<div class="col-sm-8">
+			<div class="row">
+				<div class="col-sm-8">
+					<h4 >Testimonials</h4></div>
+					<div class="col-sm-4">
+						<h5><a href="{% url 'testimonial:create' %}" > <i class="fa fa-commenting" aria-hidden="true"></i>			Write Testimonial</a></h5>
 					</div>
 				</div>
+			{% include "dental_studio/testimonials.html" %}
+		</div>
 
-				<div class="panel panel-default">
-					<div class="panel-heading" role="tab" id="headingTwo">
-						<h4 class="panel-title">
-							<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-								Do you use a toothpick after every meal?
-							</a>
-						</h4>
-					</div>
-					<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-						<div class="panel-body">
-							Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia 
+		<div class="col-sm-4">
+			<h4>Take your SMILE Test</h4>
+			<div class="col-md-8" id="main">
+
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingTwo">
+							<h4 class="panel-title">
+								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+									Are you happy with your smile ?
+								</a>
+							</h4>
+						</div>
+						<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+							<div class="panel-body">
+								Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia 
+							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="panel panel-default">
-					<div class="panel-heading" role="tab" id="headingThree">
-						<h4 class="panel-title">
-							<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-								Does it pain after a cold sip ?
-							</a>
-						</h4>
-					</div>
-					<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-						<div class="panel-body">
-							Anim pariatur cliche reprehenderit, enim eiusmod high
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingTwo">
+							<h4 class="panel-title">
+								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+									Do you use a toothpick after every meal?
+								</a>
+							</h4>
+						</div>
+						<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+							<div class="panel-body">
+								Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia 
+							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="panel panel-default">
-					<div class="panel-heading" role="tab" id="headingThree">
-						<h4 class="panel-title">
-							<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-								Do you brush twice a day?
-							</a>
-						</h4>
-					</div>
-					<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-						<div class="panel-body">
-							Anim pariatur cliche reprehenderit, enim eiusmod high
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingThree">
+							<h4 class="panel-title">
+								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+									Does it pain after a cold sip ?
+								</a>
+							</h4>
+						</div>
+						<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+							<div class="panel-body">
+								Anim pariatur cliche reprehenderit, enim eiusmod high
+							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="panel panel-default">
-					<div class="panel-heading" role="tab" id="headingfive">
-						<h4 class="panel-title">
-							<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-								Do you use floss regularly?
-							</a>
-						</h4>
-					</div>
-					<div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfive">
-						<div class="panel-body">
-							Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia 
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingThree">
+							<h4 class="panel-title">
+								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+									Do you brush twice a day?
+								</a>
+							</h4>
+						</div>
+						<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+							<div class="panel-body">
+								Anim pariatur cliche reprehenderit, enim eiusmod high
+							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="panel panel-default">
-					<div class="panel-heading" role="tab" id="headingSix">
-						<h4 class="panel-title">
-							<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-								Do you use a toothpick after every meal?
-							</a>
-						</h4>
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingfive">
+							<h4 class="panel-title">
+								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+									Do you use floss regularly?
+								</a>
+							</h4>
+						</div>
+						<div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfive">
+							<div class="panel-body">
+								Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia 
+							</div>
+						</div>
 					</div>
-					<div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
-						<div class="panel-body">
-							Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia 
+
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingSix">
+							<h4 class="panel-title">
+								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+									Do you use a toothpick after every meal?
+								</a>
+							</h4>
+						</div>
+						<div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+							<div class="panel-body">
+								Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia 
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<!-- <div id="about" class="container-fluid"  style="background-color: #bfd9d2;"> #51babf61;-->
-<div id="about" class="container-fluid"  style="background-color: #83c3c77a; height: 600px; padding-top: 40px;">
+	<!-- <div id="about" class="container-fluid"  style="background-color: #bfd9d2;"> #51babf61;-->
+		<div id="about" class="container-fluid"  style="background-color: #83c3c77a; height: 600px; padding-top: 40px;">
 
-	{% include "dental_studio/profile.html" %}
-</div>
+			{% include "dental_studio/profile.html" %}
+		</div>
 
-<!-- Map and Contact Form (Contact Section) -->
-<div id="contact" class="container-fluid" style="background-color: #fae6e669;">
-	<h2 class="text-center">CONTACT</h2>
-	{% include "dental_studio/contact.html" %}
+		<!-- Map and Contact Form (Contact Section) -->
+		<div id="contact" class="container-fluid" style="background-color: #fae6e669;">
+			<h2 class="text-center">CONTACT</h2>
+			{% include "dental_studio/contact.html" %}
 
-</div>
+		</div>
 
-<!-- Add Google Maps -->
+		<!-- Add Google Maps -->
 <!-- <div id="googleMap" style="height:400px;width:100%;"></div>
 <script>
 function myMap() {

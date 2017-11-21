@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-
+import datetime
 from django.db import models
 from django.contrib import admin
 from django import forms
+from django.utils import timezone
 
 # Create your models here.
 class Patient(models.Model):
@@ -94,9 +95,15 @@ class Visit(models.Model):
 
 
 class Testimonial(models.Model):
-    content = models.CharField(max_length=2000)
-    created_date = models.DateTimeField()
-    user = models.CharField(max_length=50, unique=True)
+    title = models.CharField(max_length=40, blank=False, default='')
+    content = models.CharField(max_length=2000, blank=False, default='')
+    created_date = models.DateTimeField(default=timezone.now)
+    STATUS_CHOICES = (
+        ('D', 'Draft'),
+        ('P', 'Published'),
+    )
+    status = models.CharField(max_length=1, choices=STATUS_CHOICES, default='D')
+    email = models.EmailField(unique=True, default='')
 
     @staticmethod
     def testimonials():

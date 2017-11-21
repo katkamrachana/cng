@@ -23,7 +23,7 @@ class TreatmentForm(forms.ModelForm):
 class TestimonialForm(forms.ModelForm):
     class Meta:
         model = Testimonial
-        fields = ('content', 'created_date', 'user')
+        fields = ('title', 'content', 'email')
 '''
 class TreatmentForm(forms.ModelForm):
     treatment_description = forms.CharField(widget=forms.Textarea)
