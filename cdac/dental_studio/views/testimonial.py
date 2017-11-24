@@ -29,6 +29,7 @@ def create_edit(request, testimonial_id=None):
         testimonial_obj = Testimonial.get.object(pk=testimonial_id)
         # set_date = False
     if request.method == 'POST':
+        print "\nrequest.POST: ", request.POST
         form = TestimonialForm(request.POST)
         print "\nPOST: form: ", form.errors
         if form.is_valid():

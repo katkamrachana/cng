@@ -1,5 +1,8 @@
 {% extends "dental_studio/base.html" %}
+
 {% block body %}
+{% load add_testimonials from cdac_tags %}
+
 {{block.super}}
 <div id="home" class="row">
 	<div id="myCarousel" class="carousel">
@@ -13,7 +16,7 @@
 		</ol>
 
 		<!-- Wrapper for slides -->
-		<div class="carousel-inner" role="listbox">
+		<div class="carousel-inner" role="listbox" style="height:455px;">
 
 			<div class="item active">
 				<img class="img-fluid" src="/static/dental_studio/images/s5.png" alt="Chania" style="width: 30%; margin-top: 60px;">
@@ -22,7 +25,7 @@
 				<img class="img-fluid" src="/static/dental_studio/images/s6.png" alt="Chania" style="width: 30%;  margin-top: 60px;">
 			</div>
 			<div class="item">
-				<img class="img-fluid" src="/static/dental_studio/images/s8.png" alt="Chania" style="width: 57.2%; margin-top: 62px;  margin-top: 60px;">
+				<img class="img-fluid" src="/static/dental_studio/images/s8.png" alt="Chania" style="width: 54.5%; margin-top: 62px;  margin-top: 60px;">
 			</div>
 			<div class="item">
 				<img class="img-fluid" src="/static/dental_studio/images/s7.png" alt="Chania" style="width: 30%;  margin-top: 60px;">
@@ -44,64 +47,20 @@
 </div>
 
 
-
-<!-- Container (Treatments Section) -->
-<!-- <div id="services" class="container-fluid text-center" style="background-color: linen;"> -->
-	<div id="services" class="container-fluid text-center" style="background-color: #1abb7d70; height: 600px; padding-top: 20px;">
-		<h4>Dental Services</h4>
-		{% include "dental_studio/services.html" %}
-	</div>
-
-	<!-- Testimonials (About Section) -->
-	<div id="testimonials" class="container-fluid" style="background-color: #fabb70; height: 600px; padding-top: 20px;">
-
+<!-- Container (Advertisement UPS Section) -->
+<!-- 
+	<div id="advertisement" class="container-fluid text-center" style="background-color: yellow; height: 280px; padding-top: 20px;">
+		<div class="row">
 		<div class="col-sm-8">
-			<div class="row">
-				<div class="col-sm-8">
-					<h4 >Testimonials</h4></div>
-					<div class="col-sm-4">
-						<h5><a href="{% url 'testimonial:create' %}" > <i class="fa fa-commenting" aria-hidden="true"></i>			Write Testimonial</a></h5>
-					</div>
-				</div>
-			{% include "dental_studio/testimonials.html" %}
+		<img class="img-fluid" src="/static/dental_studio/images/banner_add1.png" alt="Chania" style="width: 90%;
+    margin-top: -17px;
+    margin-left: -56px;">
+			
 		</div>
+		<div class="col-sm-4"  id="main" >
+			<h5>Take your SMILE Test</h5>
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" style="margin-left: 124px; margin-top: -34px;">
 
-		<div class="col-sm-4">
-			<h4>Take your SMILE Test</h4>
-			<div class="col-md-8" id="main">
-
-				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
-
-					<div class="panel panel-default">
-						<div class="panel-heading" role="tab" id="headingTwo">
-							<h4 class="panel-title">
-								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-									Are you happy with your smile ?
-								</a>
-							</h4>
-						</div>
-						<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-							<div class="panel-body">
-								Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia 
-							</div>
-						</div>
-					</div>
-
-					<div class="panel panel-default">
-						<div class="panel-heading" role="tab" id="headingTwo">
-							<h4 class="panel-title">
-								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-									Do you use a toothpick after every meal?
-								</a>
-							</h4>
-						</div>
-						<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-							<div class="panel-body">
-								Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia 
-							</div>
-						</div>
-					</div>
 
 					<div class="panel panel-default">
 						<div class="panel-heading" role="tab" id="headingThree">
@@ -152,7 +111,7 @@
 						<div class="panel-heading" role="tab" id="headingSix">
 							<h4 class="panel-title">
 								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-									Do you use a toothpick after every meal?
+									Do you need toothpick after every meal?
 								</a>
 							</h4>
 						</div>
@@ -162,9 +121,46 @@
 							</div>
 						</div>
 					</div>
+								<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingTwo">
+							<h4 class="panel-title">
+								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+									Are you happy with your smile ?
+								</a>
+							</h4>
+						</div>
+						<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+							<div class="panel-body">
+								Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia 
+							</div>
+						</div>
+					</div>
+
+
+
 				</div>
-			</div>
 		</div>
+	</div></div>
+ -->
+
+<!-- Container (Treatments Section) -->
+<!-- <div id="services" class="container-fluid text-center" style="background-color: linen;"> -->
+	<div id="services" class="container-fluid text-center" style="background-color: #1abb7d70; height: 600px; padding-top: 20px;">
+		<h4>Dental Services</h4>
+		{% include "dental_studio/services.html" %}
+	</div>
+
+	<!-- Testimonials (About Section) -->
+	<div id="testimonials" class="container-fluid" style="background-color: #fca53d; height: 600px; padding-top: 20px;">
+
+		<div class="col-sm-8">
+			<h4 >Testimonials</h4>
+			{% include "dental_studio/testimonials.html" %}
+		</div>
+		<div class="col-sm-4">
+			{% include "dental_studio/add_testimonial.html" %}
+		</div>
+
 	</div>
 
 	<!-- <div id="about" class="container-fluid"  style="background-color: #bfd9d2;"> #51babf61;-->

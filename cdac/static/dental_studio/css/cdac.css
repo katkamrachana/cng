@@ -284,6 +284,7 @@ li.menu-item > a{
   }
   .carousel-indicators li {
     border-color: #266467;
+    background-color: grey;
   }
   .carousel-indicators li.active {
     background-color: #52babf;
@@ -311,7 +312,9 @@ li.menu-item > a{
     background-color: #fff !important;
     color: #f4511e;
   }
-  .panel-heading {
+  .panel-heading 
+    {
+      width: 116%;
     color: #fff !important;
     /*background-color: #f4511e !important;*/
     background-color: #705534 !important;
@@ -409,9 +412,16 @@ li.menu-item > a{
     padding: 0.4em 0.6em;
     outline: none;
     font-weight:bold;
+    font-size: 20px;
     text-decoration: none;
+    width: 100%;
+
   }
 
+  .panel-group{
+    margin-left: 70px;
+    margin-top: -34px;
+  }
   #accordion .panel-title > a.accordion-toggle::before, #accordion a[data-toggle="collapse"]::before  {
     float: left;
     content:"\e113";

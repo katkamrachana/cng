@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 import datetime
+import json
 from django.db import models
 from django.contrib import admin
 from django import forms
@@ -96,6 +97,7 @@ class Visit(models.Model):
 
 class Testimonial(models.Model):
     title = models.CharField(max_length=40, blank=False, default='')
+    name = models.CharField(max_length=40, blank=False, default='')
     content = models.CharField(max_length=2000, blank=False, default='')
     created_date = models.DateTimeField(default=timezone.now)
     STATUS_CHOICES = (
@@ -109,4 +111,12 @@ class Testimonial(models.Model):
     def testimonials():
         """Return the list of all Patients."""
         return Testimonial.objects.all()
+
+
+    @staticmethod
+    def get_email_list():
+        """Return the list of all Patients."""
+        all_t = Testimonial.objects.all()
+        all_emails = list(all_t.values_list('email', flat=True))
+        return json.dumps(all_emails)
 
