@@ -1,1 +1,1 @@
-web: gunicorn cdac.wsgi --log-file -
+web: gunicorn cdac.cdac.wsgi --log-file -
