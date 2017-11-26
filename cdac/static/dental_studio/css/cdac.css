@@ -17,12 +17,13 @@
 }
 
 ul.menu-list > li.active{
+  background-color: white;
     border-bottom: 2px solid;
     border-color: #247aa2;
 }
 
 li.menu-item > a{
-	font-size: 17px; 
+	font-size: 20px; 
 	color: #247aa2 !important;
 }
 .meta-info{

@@ -5,7 +5,7 @@
     color: black;
   }
 </style>
-      <div style="height: 450px; overflow-x: auto; margin-top: 2%; overflow-y: auto; overflow-x: hidden; margin-left: 65px;" id="testimonials">
+      <div style="height: 450px; overflow-x: auto; margin-top: 2%; overflow-y: auto; overflow-x: hidden; margin-left: 65px;" id="testimonials-listing">
         {% get_testimonials as all_testimonials %}
         {% for each in all_testimonials %}
           <div class="row">
@@ -19,7 +19,7 @@
           </div>
         {% endfor %}
         <div class="row text-center">
-        <a href="#" class="load-testimonials">Read More ..</a>
+        <a href="#" class="load-testimonials" style="color: white;">Read More ..</a>
         </div>
 
       </div>
