@@ -51,4 +51,4 @@ def create_edit(request, testimonial_id=None):
         args['form'] = form
         print form
     print "*"*80
-    return render(request, 'dental_studio/node_create.html', {'form': form, 'action_url': 'testimonial:create'}, args)
+    return render(request, 'dental_studio/node_create.html', {'form': form, 'action_url': 'testimonial:create', 'title': "Write Testimonial"}, args)

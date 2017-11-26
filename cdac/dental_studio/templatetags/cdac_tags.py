@@ -5,6 +5,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from dental_studio.models import *
 from django.template import Library
+import json
 
 register = Library()
 
@@ -22,6 +23,10 @@ def add_testimonials():
 def get_form(form_name):
     from dental_studio.forms import TestimonialForm
     form = TestimonialForm()
+    return form
+
+@register.assignment_tag
+def get_testimonial_emails():
     all_emails = Testimonial.get_email_list()
     print "\n AALL EMAILS: ", all_emails
-    return (form ,all_emails)
+    return all_emails

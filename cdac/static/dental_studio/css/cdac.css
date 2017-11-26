@@ -1,3 +1,7 @@
+/*primary-color : #247aa2;*/
+/*secondry-color : #2888b5;*/
+/*tertiary-color : #529fc3;*/
+
 
 /*div.nav-seader{
 	margin-top: 20px;
@@ -14,12 +18,12 @@
 
 ul.menu-list > li.active{
     border-bottom: 2px solid;
-    border-color: #306769;
+    border-color: #247aa2;
 }
 
 li.menu-item > a{
 	font-size: 17px; 
-	color: #234b4c !important;
+	color: #247aa2 !important;
 }
 .meta-info{
     margin-top: 38px;
@@ -41,30 +45,30 @@ li.menu-item > a{
 
 
 .sitelogo{
-    width: 40px;
+    width: 50px;
     margin-top: -6px;
     margin-left: -153px;
 }
 
 .site-fullname{
-	color: #306769;
+	color: #247aa2;
 }
 
 .site-primary-name{
-	color: #2c5556;
-    margin-top: -39px;
+color: #247aa2;
+    margin-top: -46px;
     text-transform: uppercase;
     font-weight: bold;
-    margin-left: -105px;
-    font-size: 20px;
+    margin-left: -100px;
+    font-size: 24px;
 }
 .site-sec-name{
-    margin-top: -11px;
-	color: #2c5556;
+    margin-top: -7px;
+    color: #247aa2;
     text-transform: uppercase;
     font-weight: bold;
-    margin-left: -105px;
-    font-size: 18px;
+    margin-left: -98px;
+    font-size: 24px;
 }
 
 
@@ -211,7 +215,7 @@ li.menu-item > a{
 }*/
 
 .dr-title{
-    color: #2c5556;
+    color: #247aa2;
     text-transform: uppercase;
     /*font-size: 30px;*/
     font-weight: bold;
@@ -300,15 +304,13 @@ li.menu-item > a{
     font-style: normal;
   }
   .panel {
+    border: none;
     /*border: 1px solid #f4511e; */
     /*border-radius:0 !important;*/
     /*transition: box-shadow 0.5s;*/
   }
-  .panel:hover {
-    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-  }
   .panel-footer .btn:hover {
-    border: 1px solid #f4511e;
+    /*border: 1px solid #f4511e;*/
     background-color: #fff !important;
     color: #f4511e;
   }
@@ -317,7 +319,7 @@ li.menu-item > a{
       width: 116%;
     color: #fff !important;
     /*background-color: #f4511e !important;*/
-    background-color: #705534 !important;
+    background-color: #247aa2 !important;
     padding: 25px;
     border-bottom: 1px solid transparent;
     border-top-left-radius: 0px;
@@ -352,7 +354,7 @@ li.menu-item > a{
 
   .navbar-nav li a:hover, .navbar-nav li.active a {
     border-bottom: 2px solid;
-    border-color: #306769;
+    border-color: #247aa2;
   }
   .navbar-default .navbar-toggle {
     border-color: transparent;
@@ -406,7 +408,7 @@ li.menu-item > a{
       font-size: 150px;
     }
   }
-  #accordion .panel-heading { padding: 0;}
+  #accordion .panel-heading { padding: 0; width: 200%;}
   #accordion .panel-title > a {
     display: block;
     padding: 0.4em 0.6em;
@@ -419,8 +421,8 @@ li.menu-item > a{
   }
 
   .panel-group{
-    margin-left: 70px;
-    margin-top: -34px;
+    margin-top: -80px;
+    margin-left: 15%;
   }
   #accordion .panel-title > a.accordion-toggle::before, #accordion a[data-toggle="collapse"]::before  {
     float: left;
@@ -435,6 +437,10 @@ li.menu-item > a{
   .panel{
     width: 390px;
     margin-top: 10%;
+  }
+
+  .panel-collapse  {
+    width: 200%
   }
 
 #home{
@@ -567,4 +573,21 @@ table, th, td {
 th, td {
   padding: 15px;
   text-align: left;
+}
+
+.smile-test-content{
+font-size: 17px;
+}
+.panel-group .panel {
+    margin-bottom: 13px;
+  }
+
+  .working-hours{
+
+  }
+
+td {
+    padding: 0px 0px 0px 0px !important;
+    margin: 0px 0px 0px 0px !important;
+    font-size: 18px;
 }

@@ -1,13 +1,16 @@
 {% extends "dental_studio/base.html" %}
 {% load material_form %} 
 {% load staticfiles material_form %}
+
+{% block title %} {{title}}
+{% endblock %}
 {% block body %}
 <div class="form-container" style="margin: 100px 0px 0px 75px; width: 50%;">
 	<div class="row">
 	{% if "appointment" in action_url %}
 		<div class="col-sm-4">
 			<h4>Appointment Request Form</h4><br/>
-			<img src="/static/dental_studio/images/appt.svg" style="width: 60h%;" />
+			<img src="/static/dental_studio/images/appt.svg" style="width: 60%;" />
 		</div>
 
 

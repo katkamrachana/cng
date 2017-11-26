@@ -44,7 +44,7 @@ def create_edit(request, appoinment_id=None):
         args['form'] = form
         print form
     print "*"*80
-    return render(request, 'dental_studio/node_create.html', {'form': form, 'action_url': 'appointment:create'}, args)
+    return render(request, 'dental_studio/node_create.html', {'form': form, 'action_url': 'appointment:create', 'title': "Book Appointment"}, args)
 
 def complete_booking(request):
     template = loader.get_template('dental_studio/booking_complete.html')
