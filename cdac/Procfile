@@ -1,1 +1,1 @@
-web: gunicorn dental_studio.wsgi --log-file -
+web: gunicorn cdac.wsgi --log-file -
