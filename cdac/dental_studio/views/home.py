@@ -8,11 +8,12 @@ from django.template import loader
 from dental_studio.models import *
 # Create your views here.
 
-def welcome(request, **kwargs):
+def welcome(request):
     # return HttpResponse("Welcome message..")
     template = loader.get_template('dental_studio/homepage.html')
     context = {
-        'title': "Welcome"
+        'title': "Welcome",
+        'context': "home"
     }
     print request.GET
     # if kwargs.get('form') and kwargs.get('redirect') and  kwargs.get('action_url'):

@@ -16,13 +16,11 @@
         <!-- Collection of nav links and other content for toggling -->
         <div id="navbarCollapse" class="collapse navbar-collapse">
           <ul class="nav navbar-nav menu-list">
-            <li class="menu-item active"><a href="#home">Home</a></li>
-            <li class="menu-item"><a href="#services">Treatments</a></li>
-            <li class="menu-item"><a href="#testimonials">Testimonials</a></li>
-            <!-- <li class="menu-item"><a href="#">Offers</a></li> -->
-            <!-- <li class="menu-item"><a href="#">Gallery</a></li> -->
-            <li class="menu-item"><a href="#about">About</a></li>
-            <li class="menu-item"><a href="#contact">Contact</a></li>
+            <li class="menu-item active"><a data-focus-panel="home" href="{% if context == 'home' %} #home {% else %} {% url 'welcome' %}{% endif %}">Home</a></li>
+            <li class="menu-item"><a data-focus-panel="services" href="{% if context == 'home' %} #services {% else %}  {% url 'welcome'  %}{% endif %}">Treatments</a></li>
+            <li class="menu-item"><a data-focus-panel="testimonials" href="{% if context == 'home' %} #testimonials {% else %} {% url 'welcome'  %}{% endif %}">Testimonials</a></li>
+            <li class="menu-item"><a data-focus-panel="about" href="{% if context == 'home' %} #about {% else %} {% url 'welcome'  %}{% endif %}">About</a></li>
+            <li class="menu-item"><a data-focus-panel="contact" href="{% if context == 'home' %} #contact {% else %} {% url 'welcome'  %}{% endif %}">Contact</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right right-menu-item">
             <li><a href="{% url 'appointment:create' %}" class="cta-type1">Book Appointment Now!</a></li>
@@ -30,3 +28,8 @@
         </div>
       </div>
     </nav>
+
+<script type="text/javascript">
+  panel_div_ele = $(".menu-item.active").find("a").attr("data-focus-panel");
+  $("#"+panel_div_ele).focus()
+</script>

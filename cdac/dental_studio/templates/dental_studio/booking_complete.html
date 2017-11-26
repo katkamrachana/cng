@@ -1,13 +1,12 @@
 {% extends "dental_studio/base.html" %}
 {% block body %}
-<div  style="margin: 100px 0px 0px 75px; width: 50%;">
+<div  style="margin: 100px 0px 0px 75px;">
 	<div class="text-center">
-		
 	<h4>Thank you. Your Appointment request is submitted.</h4>
 	<h4>You will receive a confirmation call soon!</h4>
 	</div><br/>
-	<h4><i>Happy Smiling!</i></h4>
-	
+	<h4><i>Happy Smiling!</i> </h4>
+<a  href="{% url 'welcome' %}" style="font-size:22px;">Keep Exploring</a>
 </div>
 {% endblock %}
 

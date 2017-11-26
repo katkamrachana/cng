@@ -169,13 +169,20 @@
 				</div>
 
 				<!-- Map and Contact Form (Contact Section) -->
-				<div id="contact" class="container-fluid" style="background-color: snow; height: 555px; margin-bottom: -80px;">
+				<div id="contact" class="container-fluid" style="background-color: #7daec75c; height: 555px; margin-bottom: -80px;">
 				<h4 style="color: #247aa2; margin-top: -10px; margin-bottom: 30px;">Contact</h4>
 
 					{% include "dental_studio/contact.html" %}
 				</div>
 
+<script type="text/javascript">
+  $(function() {
+		
+  panel_div_ele = $(".menu-item.active").find("a").attr("data-focus-panel");
+  $("#"+panel_div_ele).focus()
+	}
 
+</script>
 
 
 {% endblock %}
