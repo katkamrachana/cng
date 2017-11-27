@@ -43,12 +43,15 @@ li.menu-item > a{
 
 
 .sitelogo{
-width: 265px;
+width: 240px;
     margin-top: -4%;
     margin-left: 0%;
   }
 
-
+.navbar-brand{
+  margin-left: -73%;
+    margin-top: -3%;
+}
 @media screen and (max-width: 580px){
 .sitelogo{
 width: 235px;
@@ -69,10 +72,7 @@ font-size: 14px;
   width: 50% !important; 
   margin-top: 60px !important;
 }
-
-
 }
-
 
 .site-nav{
   background-color: white !important;
@@ -84,7 +84,7 @@ font-size: 14px;
 
 .site-primary-name{
 color: #247aa2;
-    margin-top: -52px;
+    margin-top: -71%;
     text-transform: uppercase;
     font-weight: bold;
     margin-left: 58px;
@@ -96,10 +96,15 @@ color: #247aa2;
     color: #247aa2;
     text-transform: uppercase;
     font-weight: bold;
-    /*margin-left: -98px;*/
+    margin-left: 19%;
     font-size: 24px;
 }
 
+@media only screen and (min-width: 768px){
+.navbar-brand{
+  font-size: 10px;
+}
+}
 
 .cta-type1 {
     color: red !important;
