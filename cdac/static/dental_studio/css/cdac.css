@@ -592,3 +592,54 @@ td {
     margin: 0px 0px 0px 0px !important;
     font-size: 18px;
 }
+
+/*homepage*/
+.carousel-imgs{
+  width: 30% !important; 
+  margin-top: 60px !important;
+}
+.carousel-inner{
+  height:455px;
+}
+
+#advertisement{
+  height: 540px; margin-top: -3%;
+}
+
+.panel-header-lbl{
+  color: #247aa2; margin-top: -10px; margin-bottom: 110px; text-align: left;
+}
+.announcement-img{
+  width: 60%; margin-top: 55px; margin-right: 128px;
+}
+
+#services{
+  height: 600px; padding-top: 20px; margin-top: -20px;
+}
+
+#testimonials{
+  background-color: #257AA1; height: 600px; padding-top: 20px; color: white;
+}
+
+.white-text{
+  color: white;
+}
+
+#about{
+  height: 600px; padding-top: 40px;
+}
+
+#contact{
+  background-color: #7daec75c; height: 555px; margin-bottom: -80px;
+}
+.smile-test-container{
+  margin-top: -30px;
+}
+
+.dental-services-icons{
+  margin-left: 85px;
+  margin-top: -65px;
+}
+.service-img{
+  width: 48%;
+}
