@@ -50,9 +50,9 @@
   $(function() {
     $("li.menu-item").click(function() {
       // remove classes from all
-      $("li").removeClass("active-menu");
+      $("li").removeClass("active");
       // add class to the one we clicked
-      $(this).addClass("active-menu");
+      $(this).addClass("active");
     });
   });
       {% block script %} {% endblock %}
