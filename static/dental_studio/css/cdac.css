@@ -57,6 +57,29 @@ li.menu-item > a{
   margin-left: -330px !important;
   margin-top: 0px !important;
 }
+@media screen and (min-width: 1439px) {
+  .site-primary-name{
+margin-top: -9% !important;
+    width: 60% !important;
+    margin-left: 27% !important;
+    font-size: 21px !important;
+}
+
+
+}
+@media screen and (min-width: 1025px) {
+  .sitelogo{
+width: 41px !important;
+    margin-top: -4%;    margin-left: 16% !important;}
+
+
+  .site-primary-name{
+margin-top: -12% !important;
+    width: 60% !important;
+    margin-left: 27% !important;
+    font-size: 21px !important;
+}
+
 @media screen and (max-width: 568px){
   .sitelogo{
     width: 45px !important;
@@ -102,6 +125,7 @@ li.menu-item > a{
     }
 
     .site-primary-name{
+margin-top: -9% !important;
       width: 42% !important;
       margin-left: 162px !important;
       font-size: 23px !important;
