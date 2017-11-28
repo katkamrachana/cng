@@ -24,26 +24,26 @@ def load_table(request):
 
 
 def create_edit(request, appoinment_id=None):
-    print "*"*80
+    print("*"*80)
     args = {}
     if request.method == 'POST':
         form = AppointmentForm(request.POST)
-        print "\nPOST: form: ", form.errors
+        print("\nPOST: form: ", form.errors)
         if form.is_valid():
             try:
                 new_appt = form.save()
-                print "\n instance: ", new_appt.pk
+                print("\n instance: ", new_appt.pk)
                 return HttpResponseRedirect(reverse('appointment:complete_booking'))
             except Exception as e:
-                print "\n\ne: ", e
+                print("\n\ne: ", e)
                 # raise e
                 pass
 
     else:
         form = AppointmentForm()
         args['form'] = form
-        print form
-    print "*"*80
+        print(form)
+    print("*"*80)
     return render(request, 'dental_studio/node_create.html', {'form': form, 'action_url': 'appointment:create', 'title': "Book Appointment"}, args)
 
 def complete_booking(request):

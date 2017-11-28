@@ -21,7 +21,6 @@ pip-delete-this-directory.txt
 *~
 bng
 *.sqlite3
-migrations/
 db.sqlite3
 /static/bower_components/
 .DS_Store

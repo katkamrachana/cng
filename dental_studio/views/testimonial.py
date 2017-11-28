@@ -22,16 +22,16 @@ def load_table(request):
 
 
 def create_edit(request, testimonial_id=None):
-    print "*"*80
+    print("*"*80)
     args = {}
     # set_date = True
     if testimonial_id:
         testimonial_obj = Testimonial.get.object(pk=testimonial_id)
         # set_date = False
     if request.method == 'POST':
-        print "\nrequest.POST: ", request.POST
+        print("\nrequest.POST: ", request.POST)
         form = TestimonialForm(request.POST)
-        print "\nPOST: form: ", form.errors
+        print("\nPOST: form: ", form.errors)
         if form.is_valid():
             try:
                 testimonial_obj = form.save()
@@ -43,12 +43,12 @@ def create_edit(request, testimonial_id=None):
                 # print "\n instance: ", new_appt.pk
                 return HttpResponseRedirect(reverse('appointment:complete_booking'))
             except Exception as e:
-                print "\n\ne: ", e
+                print("\n\ne: ", e)
                 # raise e
                 pass
     else:
         form = TestimonialForm()
         args['form'] = form
-        print form
-    print "*"*80
+        print(form)
+    print("*"*80)
     return render(request, 'dental_studio/node_create.html', {'form': form, 'action_url': 'testimonial:create', 'title': "Write Testimonial"}, args)

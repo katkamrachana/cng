@@ -9,7 +9,7 @@ from dental_studio.models import *
 from dental_studio.views.tables import *
 
 def patient(request):
-	print "\n\n1*************"
+	print ("\n\n1*************")
 	pass
 
 def patient_detail(request, patient_id):
@@ -24,14 +24,14 @@ def patient_delete(request, patient_id):
 
 
 def patient_create_edit(request, patient_id=None):
-	print "*"*80
+	print ("*"*80)
 	form = PatientForm()
-	print form
-	print "*"*80
+	print(form)
+	print ("*"*80)
 	return render(request, 'dental_studio/node_create.html', {'form': form})
 
 def patient_create(request):
-	print "\nHELLo"
+	print ("\nHELLo")
 	pass
 
 

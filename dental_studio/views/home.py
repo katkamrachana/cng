@@ -15,7 +15,7 @@ def welcome(request):
         'title': "Welcome",
         'context': "home"
     }
-    print request.GET
+    print(request.GET)
     # if kwargs.get('form') and kwargs.get('redirect') and  kwargs.get('action_url'):
 
     return HttpResponse(template.render(context, request))
