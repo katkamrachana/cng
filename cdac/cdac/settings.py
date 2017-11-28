@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     'material',
     'material.frontend',
     'material.admin',
-    'cdac.dental_studio',
+    'dental_studio',
 ]
 
 MIDDLEWARE = [
