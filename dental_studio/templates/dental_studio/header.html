@@ -13,14 +13,17 @@
             <h3 class="site-primary-name"> Chirayu Aesthetic Dental Clinic </h3>
           </a>
           <div class="navbar-collapse collapse"> 
-            <ul class="nav navbar-nav navbar-right"> 
+            <ul class="nav navbar-nav"> 
               <li class=" active"><a data-focus-panel="home" href="{% if context == 'home' %} #home {% else %} {% url 'welcome' %}{% endif %}">Home</a></li>
               <li class=""><a data-focus-panel="services" href="{% if context == 'home' %} #services {% else %}  {% url 'welcome'  %}{% endif %}">Treatments</a></li>
               <li class=""><a data-focus-panel="testimonials" href="{% if context == 'home' %} #testimonials {% else %} {% url 'welcome'  %}{% endif %}">Testimonials</a></li>
               <li class=""><a data-focus-panel="about" href="{% if context == 'home' %} #about {% else %} {% url 'welcome'  %}{% endif %}">About</a></li>
               <li class=""><a data-focus-panel="contact" href="{% if context == 'home' %} #contact {% else %} {% url 'welcome'  %}{% endif %}">Contact</a></li>
-            </ul>
+            <li>
+              <a href="{% url 'appointment:create' %}" style="color:red">Book an Appointment</a>
+            </li>
 
+            </ul>
 
           </div>
         </div>
