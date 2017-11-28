@@ -26,7 +26,7 @@ def patient_delete(request, patient_id):
 def patient_create_edit(request, patient_id=None):
 	print ("*"*80)
 	form = PatientForm()
-	print form
+	print(form)
 	print ("*"*80)
 	return render(request, 'dental_studio/node_create.html', {'form': form})
 
