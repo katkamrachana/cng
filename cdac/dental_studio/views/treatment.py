@@ -16,8 +16,8 @@ def load_table(request):
     return render(request, 'dental_studio/table.html', {'table': table})
 
 def treatment_create_edit(request, appoinment_id=None):
-	print "*"*80
+	print("*"*80)
 	form = TreatmentForm()
-	print form
-	print "*"*80
+	print(form)
+	print("*"*80)
 	return render(request, 'dental_studio/node_create.html', {'form': form})
