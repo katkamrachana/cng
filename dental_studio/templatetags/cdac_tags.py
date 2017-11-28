@@ -16,7 +16,7 @@ def get_testimonials():
 
 @register.inclusion_tag('dental_studio/add_testimonial.html', takes_context=True)
 def add_testimonials():
-    print "\nHERE"
+    # print "\nHERE"
     return {"HERE": "HELLO"}
 
 @register.assignment_tag
@@ -28,5 +28,5 @@ def get_form(form_name):
 @register.assignment_tag
 def get_testimonial_emails():
     all_emails = Testimonial.get_email_list()
-    print "\n AALL EMAILS: ", all_emails
+    # print "\n AALL EMAILS: ", all_emails
     return all_emails
