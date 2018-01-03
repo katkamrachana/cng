@@ -16,7 +16,10 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    viewBox="0 0 64 64"
-   sodipodi:docname="stamp.svg">
+   sodipodi:docname="stamp.svg"
+   inkscape:export-filename="/home/rbk/katkam/lakshin/cng/static/dental_studio/images/stamp.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs3370">
     <ellipse
@@ -44,7 +47,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="7.7781746"
-     inkscape:cx="22.375521"
+     inkscape:cx="0.58377567"
      inkscape:cy="15.369531"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -63,7 +66,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -81,7 +84,7 @@
        y="-6.3808517"><textPath
          xlink:href="#path4279-2"
          id="textPath4281-3"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.25px;font-family:serif;-inkscape-font-specification:'serif Bold';fill:#d40000">TILL 31st DEC 2017</textPath></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.25px;font-family:serif;-inkscape-font-specification:'serif Bold';fill:#d40000">TILL 31st JAN 2018</textPath></text>
     <g
        transform="matrix(0.98752707,-0.1574493,0.1574493,0.98752707,-4.6499731,5.3765382)"
        id="g4424">
