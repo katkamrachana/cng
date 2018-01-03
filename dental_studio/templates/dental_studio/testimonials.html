@@ -1,28 +1,19 @@
 {% load get_testimonials from cdac_tags %}
-<style type="text/css">
-  p{
-    font-size: 19px;
-    color: black;
-  }
-</style>
-      <div style="height: 450px; overflow-x: auto; margin-top: 2%; overflow-y: auto; overflow-x: hidden; margin-left: 65px;" id="testimonials-listing">
-        {% get_testimonials as all_testimonials %}
-        {% for each in all_testimonials %}
-          <div class="row">
-            <div class="col-sm-2 text-center">
-              <i class="fa fa-user" aria-hidden="true" style="font-size: 57px;"></i><br/><label style="font-size: 21px; color: white;">{{each.name}}</label>
-            </div>        
-            <div class="col-sm-10">
-              <h5><i>{{each.title}}</i></h5>
-              <p style="color: white;">{{each.content}}</p>
-            </div>        
-          </div>
-        {% endfor %}
-        <div class="row text-center">
-        <a href="#" class="load-testimonials" style="color: white;">Read More ..</a>
-        </div>
-
-      </div>
+              {% get_testimonials as all_testimonials %}
+              {% for each in all_testimonials %}
+              <div class="row">
+                <div class="col-sm-2 text-center">
+                  <i class="fa fa-user" aria-hidden="true"></i><br/><label>{{each.name|truncatechars:20}}</label>
+                </div>        
+                <div class="col-sm-10">
+                  <h5><i>{{each.title}}</i></h5>
+                  <p>{{each.content}}</p>
+                </div>        
+              </div>
+              {% endfor %}
+              <div class="row text-center">
+                <a href="#" class="load-testimonials" style="color: white;">Read More ..</a>
+              </div>
 <script type="text/javascript">
   $(document).on('click','.load-testimonials',function(){
     $(".testimonial-copy").removeClass("hide");
