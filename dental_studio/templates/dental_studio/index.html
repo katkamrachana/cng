@@ -8,6 +8,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="/static/dental_studio/css/cdac2.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  >
+
 
 </head>
 <!-- NAVBAR
@@ -35,7 +37,8 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="#home">Home</a></li>
+                <!--
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Treatments <span class="caret"></span></a>
                   <ul class="dropdown-menu">
@@ -46,7 +49,9 @@
                     <li><a href="#">Something else here</a></li>
                   </ul>
                 </li>
-                <li><a href="#about">Testimonials</a></li>
+              -->
+                <li><a href="#treatments">Treatments</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#contact">Book Appointment</a></li>
@@ -61,7 +66,7 @@
 
     <!-- Carousel
       ================================================== -->
-      <div class="container">
+      <div class="container" id="home">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
           <ol class="carousel-indicators">
@@ -104,28 +109,30 @@
 
       <div class="container marketing">
         <!-- Three columns of text below the carousel -->
+        <div id="treatments">
+          
         <div class="row featurette">
           <h2>Treatments</h2>
 
           <div class="col-lg-3 col-md-6">
             <img src="/static/dental_studio/images/treatment.svg" alt="Generic placeholder image" width="200" height="200">
             <h2>Treatment</h2>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
           </div><!-- /.col-lg-3 col-md-6 -->
           <div class="col-lg-3 col-md-6">
             <img src="/static/dental_studio/images/dental_fillings.svg" alt="Generic placeholder image" width="200" height="200">
             <h2>Dental Fillings</h2>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
           </div><!-- /.col-lg-3 col-md-6 -->
           <div class="col-lg-3 col-md-6">
             <img src="/static/dental_studio/images/teeth_whitening.svg" alt="Generic placeholder image" width="200" height="200">
             <h2>Teeth Whitening</h2>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
           </div><!-- /.col-lg-3 col-md-6 -->
           <div class="col-lg-3 col-md-6">
             <img src="/static/dental_studio/images/gingivitis.svg" alt="Generic placeholder image" width="200" height="200">
             <h2>Gingivitis</h2>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
           </div><!-- /.col-lg-3 col-md-6 -->
 
         </div><!-- /.row -->
@@ -133,23 +140,25 @@
           <div class="col-lg-3 col-md-6">
             <img src="/static/dental_studio/images/periodontology.svg" alt="Generic placeholder image" width="200" height="200">
             <h2>Periodontology</h2>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
           </div><!-- /.col-lg-3 col-md-6 -->
           <div class="col-lg-3 col-md-6">
             <img src="/static/dental_studio/images/oral_hygiene.svg" alt="Generic placeholder image" width="200" height="200">
             <h2>Oral Hygiene</h2>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
           </div><!-- /.col-lg-3 col-md-6 -->
 
 
         </div><!-- /.row -->
+        </div>
 
 
         <hr class="featurette-divider">
 
 
         <div class="row featurette">
-          <div class="col-md-7">
+
+          <div class="col-md-7" >
             <h2>Take your SMILE Test</h2>
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" >
 
@@ -235,11 +244,11 @@
 
 
               </div>
-            </div>
-            <div class="col-md-5">
-              <img class="featurette-image img-responsive center-block" src="/static/dental_studio/images/stamp1.png"  alt="Generic placeholder image">
-            </div>
           </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-responsive center-block" src="/static/dental_studio/images/stamp1.png"  alt="Generic placeholder image">
+          </div>
+        </div>
 
 
 
@@ -249,7 +258,8 @@
 
           <hr class="featurette-divider">
 
-          <div class="row featurette">
+          <div class="row featurette" id="testimonials">
+                          <h2 class="featurette-heading">Testimonials</h2>
             <div class="col-lg-8 col-md-7" style="height: 450px; overflow-x: auto; overflow-y: auto; overflow-x: hidden;">
               {% get_testimonials as all_testimonials %}
               {% for each in all_testimonials %}
@@ -283,10 +293,8 @@
           </div>
 
           <hr class="featurette-divider">
-
-          <div class="row featurette">
+          <div class="row featurette" id="about">
             <div class="col-md-7">
-              <h2>Know your Dentist</h2>
               <h2 class="featurette-heading">Dr. Rajlaxmi Katkam Ghone</h2> <h3>Specialization in Aesthetic Dentistry, B.D.S (Mumbai)</h3>
               <br/>
 
@@ -304,15 +312,13 @@
                   <br/>
                   <h6 style="color: black;">Member</h6>
                   <img src="/static/dental_studio/images/ida.png" style="width:10%;" alt="Member of Indian Dental Association">
-                </div>
-
-
-
               </div>
-              <div class="col-md-5">
-                <img class="featurette-image img-responsive center-block" src="/static/dental_studio/images/small-dentist.jpg" alt="Generic placeholder image">
-              </div>
+
             </div>
+            <div class="col-md-5">
+              <img class="featurette-image img-responsive center-block" src="/static/dental_studio/images/small-dentist.jpg" alt="Generic placeholder image">
+            </div>
+          </div>
 
             <hr class="featurette-divider">
 
@@ -365,8 +371,10 @@
 
             <!-- FOOTER -->
             <footer>
+      
               <p class="pull-right"><a href="#">Back to top</a></p>
-              <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+            <p> Chirayu Dental Aesthetic Clinic <i class="fa fa-copyright" aria-hidden="true"></i> 2017</p>
+            <p  class="pull-right"> Powered by <a href="https://github.com/katkamrachana/cng">katkamrachana</a> </p>
             </footer>
 
           </div><!-- /.container -->
