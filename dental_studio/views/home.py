@@ -10,7 +10,8 @@ from dental_studio.models import *
 
 def welcome(request):
     # return HttpResponse("Welcome message..")
-    template = loader.get_template('dental_studio/homepage.html')
+    # template = loader.get_template('dental_studio/homepage.html')
+    template = loader.get_template('dental_studio/index.html')
     context = {
         'title': "Welcome",
         'context': "home"

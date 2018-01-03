@@ -2,6 +2,7 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -17,11 +18,24 @@
    inkscape:version="0.91 r13725"
    viewBox="0 0 64 64"
    sodipodi:docname="stamp.svg"
-   inkscape:export-filename="/home/rbk/katkam/lakshin/cng/static/dental_studio/images/stamp.png"
-   inkscape:export-xdpi="313.59375"
-   inkscape:export-ydpi="313.59375">
+   inkscape:export-filename="/home/rbk/katkam/lakshin/cng/static/dental_studio/images/stamp1.png"
+   inkscape:export-xdpi="928.34576"
+   inkscape:export-ydpi="928.34576">
   <defs
      id="defs3370">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4161"
+       osb:paint="gradient">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop4163" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop4165" />
+    </linearGradient>
     <ellipse
        style="opacity:1;fill:none;fill-opacity:1;stroke:#2d00f3;stroke-width:0.54534298;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path4245-4"
@@ -47,7 +61,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="7.7781746"
-     inkscape:cx="9.6475989"
+     inkscape:cx="-12.144146"
      inkscape:cy="25.654721"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -76,7 +90,9 @@
      inkscape:groupmode="layer">
     <g
        id="g4158"
-       transform="matrix(0.85323897,0,0,0.93470269,5.2393617,2.0349074)">
+       transform="matrix(0.74317097,0,0,0.79395922,8.7140161,12.865349)"
+       inkscape:export-xdpi="491.00702"
+       inkscape:export-ydpi="491.00702">
       <text
          y="-6.3808517"
          x="-3.8821077"
@@ -92,26 +108,26 @@
          id="g4424"
          transform="matrix(0.98752707,-0.1574493,0.1574493,0.98752707,-4.6499731,5.3765382)">
         <ellipse
-           style="opacity:1;fill:none;fill-opacity:1;stroke:#cd0000;stroke-width:1.691401;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#cd0000;stroke-width:1.96641505;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
            id="path3376"
            cx="31.609795"
            cy="32.037231"
            ry="31.294752"
            rx="31.744753" />
         <circle
-           style="opacity:1;fill:none;fill-opacity:1;stroke:#cd0000;stroke-width:0.91099739;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#cd0000;stroke-width:1.05912137;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
            id="path3376-3"
            cx="31.609795"
            cy="32.037231"
            r="29.59322" />
         <circle
-           style="opacity:1;fill:none;fill-opacity:1;stroke:#cd0000;stroke-width:1.56767464;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#cd0000;stroke-width:1.82257152;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
            id="path4193"
            cx="31.609795"
            cy="32.037231"
            r="19.4" />
         <ellipse
-           style="opacity:1;fill:none;fill-opacity:1;stroke:#cd0000;stroke-width:0.90566695;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#cd0000;stroke-width:1.05292428;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
            id="path4193-6"
            cx="31.609795"
            cy="32.037231"
@@ -140,7 +156,7 @@
              id="textPath4251-2"
              style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.02803659px;font-family:serif;-inkscape-font-specification:'serif Bold';fill:#d40000">DENTAL CHECKUP</textPath></text>
         <rect
-           style="opacity:1;fill:none;fill-opacity:1;stroke:#cd0000;stroke-width:0.78383732;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#cd0000;stroke-width:0.91128576;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
            id="rect4210"
            width="72.36364"
            height="15.454545"
@@ -285,5 +301,14 @@
            id="tspan4237-3"
            sodipodi:role="line">FREE</tspan></text>
     </g>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4159"
+       width="64.410995"
+       height="64.15387"
+       x="0"
+       y="-0.18407771"
+       inkscape:export-xdpi="491.00702"
+       inkscape:export-ydpi="491.00702" />
   </g>
 </svg>
