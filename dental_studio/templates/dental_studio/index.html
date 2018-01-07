@@ -109,53 +109,8 @@
 
       <div class="container">
         <!-- Three columns of text below the carousel -->
-        <div id="treatments">
-          
-        <div class="row featurette marketing">
-          <h2>Treatments</h2>
-
-          <div class="col-lg-3 col-md-6">
-            <img src="/static/dental_studio/images/treatment.svg" alt="Generic placeholder image" width="200" height="200">
-            <h2>Treatment</h2>
-            <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
-          </div><!-- /.col-lg-3 col-md-6 -->
-          <div class="col-lg-3 col-md-6">
-            <img src="/static/dental_studio/images/dental_fillings.svg" alt="Generic placeholder image" width="200" height="200">
-            <h2>Dental Fillings</h2>
-            <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
-          </div><!-- /.col-lg-3 col-md-6 -->
-          <div class="col-lg-3 col-md-6">
-            <img src="/static/dental_studio/images/teeth_whitening.svg" alt="Generic placeholder image" width="200" height="200">
-            <h2>Teeth Whitening</h2>
-            <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
-          </div><!-- /.col-lg-3 col-md-6 -->
-          <div class="col-lg-3 col-md-6">
-            <img src="/static/dental_studio/images/gingivitis.svg" alt="Generic placeholder image" width="200" height="200">
-            <h2>Gingivitis</h2>
-            <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
-          </div><!-- /.col-lg-3 col-md-6 -->
-
-        </div><!-- /.row -->
-        <div class="row">
-          <div class="col-lg-3 col-md-6">
-            <img src="/static/dental_studio/images/periodontology.svg" alt="Generic placeholder image" width="200" height="200">
-            <h2>Periodontology</h2>
-            <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
-          </div><!-- /.col-lg-3 col-md-6 -->
-          <div class="col-lg-3 col-md-6">
-            <img src="/static/dental_studio/images/oral_hygiene.svg" alt="Generic placeholder image" width="200" height="200">
-            <h2>Oral Hygiene</h2>
-            <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
-          </div><!-- /.col-lg-3 col-md-6 -->
-
-
-        </div><!-- /.row -->
-        </div>
-
-
+        {% include 'dental_studio/services.html' %}
         <hr class="featurette-divider">
-
-
         <div class="row featurette marketing">
 
           <div class="col-md-7" >
@@ -163,46 +118,28 @@
             {% include "dental_studio/smile_test.html" %}
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block" src="/static/dental_studio/images/stamp1.png"  alt="Generic placeholder image">
+            <img class="featurette-image img-responsive center-block" src="/static/dental_studio/images/stamp.png"  alt="Generic placeholder image">
           </div>
         </div>
-
-
-
-          <!-- START THE FEATURETTES -->
-
-
-
-          <hr class="featurette-divider">
-
-          <div class="row featurette marketing" id="testimonials">
-            <h2 class="featurette-heading">Testimonials</h2>
-            <div class="col-lg-8 col-md-7" style="height: 450px; overflow-x: auto; overflow-y: auto; overflow-x: hidden;">
-            {% include "dental_studio/testimonials.html" %}
-            </div>
-            <div class="col-lg-4 col-md-5" >
-            {% include "dental_studio/add_testimonial.html" %}
-
-            </div>
+        <hr class="featurette-divider">
+        <div class="row featurette marketing" id="testimonials">
+          <h2 class="featurette-heading">Testimonials</h2>
+          <div class="col-lg-8 col-md-7" style="height: 450px; overflow-x: auto; overflow-y: auto; overflow-x: hidden;">
+          {% include "dental_studio/testimonials.html" %}
           </div>
+          <div class="col-lg-4 col-md-5" >
+          {% include "dental_studio/add_testimonial.html" %}
 
-          <hr class="featurette-divider">
-            {% include "dental_studio/profile.html" %}
-
-
-            <hr class="featurette-divider">
-
-            {% include "dental_studio/contact.html" %}
-
-            <hr class="featurette-divider">
-
-            <!-- /END THE FEATURETTES -->
-
-
-            <!-- FOOTER -->
-            {% include "dental_studio/footer.html" %}
-
-          </div><!-- /.container -->
+          </div>
+        </div>
+        <hr class="featurette-divider">
+        {% include "dental_studio/profile.html" %}
+        <hr class="featurette-divider">
+        {% include "dental_studio/contact.html" %}
+        <hr class="featurette-divider">
+        <!-- FOOTER -->
+        {% include "dental_studio/footer.html" %}
+      </div>
 
 
     <!-- Bootstrap core JavaScript

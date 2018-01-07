@@ -3,23 +3,20 @@
 {% load material_form %} 
 {% load staticfiles material_form %}
 <style type="text/css">
-	.input-field label, .input-field label.active {
-		color: white
-	}
 	.submit-btn{
 		color: #257aa1;
 		background-color: #f8f8f8;
 	}
 
 </style>
-              <div class="form-container" id="add_testimonial">
-                <h5>Share your story</h5>
-                <div class="row">
-                  <div class="col-sm-8">
-                    <form method="POST" class="viewform" action="{% url 'testimonial:write' %}" >{% csrf_token %}
-                      {% form form=formObj %}{% endform %}
-                      <button type="submit" name="_submit" class="btn btn-primary btn-lg submit-btn">Submit</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
+<div class="form-container" id="add_testimonial">
+  <h5>Share your story</h5>
+  <div class="row">
+    <div class="col-sm-8">
+      <form method="POST" class="viewform" action="{% url 'testimonial:write' %}" >{% csrf_token %}
+        {% form form=formObj %}{% endform %}
+        <button type="submit" name="_submit" class="btn btn-primary btn-lg submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
