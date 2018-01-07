@@ -14,3 +14,8 @@ body {
   padding-bottom: 40px;
   color: #5a5a5a;
 }
+
+.act-header{
+	font-weight: bold;
+	color: red !important;
+}
