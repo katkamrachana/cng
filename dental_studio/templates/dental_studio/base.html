@@ -3,32 +3,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Chirayu Aesthetic Dental Clinic - Dr. Rajlaxmi Ghone.  {% block title %} {% endblock %} </title>
+  <title>Chirayu Aesthetic Dental Clinic</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"  ></script>
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/static/dental_studio/css/cdac2.css">
 
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css"  >
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  >
-  <link rel="icon" type="image/png" href="/static/dental_studio/images/favicon.ico" />
-  <link rel="stylesheet" href="/static/dental_studio/css/cdac.css">
-  <!-- font-awesome icons -->
-
-
-{% include 'material/includes/material_css.html' %}
-    <script src="{% static 'material/js/jquery.js' %}"></script>
-    {% include 'material/includes/material_js.html' %}
-
-
-  {% block head %}
-
-  <style>
-  {% block style %}{% endblock %}
+{% block head %}
+<style>
+{% block style %}{% endblock %}
 
 </style>
 {% endblock %}
@@ -36,33 +23,18 @@
 <body  itemscope itemtype="http://schema.org/Webpage" id="base-cng" >
   {% include "dental_studio/header.html" %}
   {% block body %}{% endblock %}
-<script type="text/javascript">
-
-  $(window).scroll(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
-
-      var winTop = $(window).scrollTop();
-      if (pos < winTop + 600) {
-        $(this).addClass("slide");
-      }
+  <script type="text/javascript">
+    $(function() {
+      $("li.menu-item").click(function() {
+        // remove classes from all
+        $("li").removeClass("active");
+        // add class to the one we clicked
+        $(this).addClass("active");
+      });
     });
-  });
-  $(function() {
-    $("li.menu-item").click(function() {
-      // remove classes from all
-      $("li").removeClass("active");
-      // add class to the one we clicked
-      $(this).addClass("active");
-    });
-  });
-      {% block script %} {% endblock %}
-</script>
+    {% block script %} {% endblock %}
+  </script>
 
 </body>
-<footer class="container-fluid text-center footer">
-<hr/>
-  
-  {% include "dental_studio/footer.html" %}
-</footer>
+{% include "dental_studio/footer.html" %}
 </html>

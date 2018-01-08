@@ -4,27 +4,23 @@
 {% load staticfiles material_form %}
 <div class="form-container" id="add_testimonial" style="margin: 100px 0px 0px 75px; width: 50%;">
 	<div class="row">
-	<div class="col-sm-8">
-	<form method="POST" class="viewform" action="{% url 'testimonial:write' %}">{% csrf_token %}
-		{% form form=formObj_and_emailList.0 %}{% endform %}
-		<input type="hidden" name="all_emails" value="{{formObj_and_emailList.1|safe}}">
-		<button type="submit" name="_submit" class="btn btn-primary btn-lg submit-btn">Submit</button>
-	</form>
-</div>
+		<div class="col-sm-8">
+			<form method="POST" class="viewform" action="{% url 'testimonial:write' %}">{% csrf_token %}
+				{% form form=formObj_and_emailList.0 %}{% endform %}
+				<input type="hidden" name="all_emails" value="{{formObj_and_emailList.1|safe}}">
+				<button type="submit" name="_submit" class="btn btn-primary btn-lg submit-btn">Submit</button>
+			</form>
+		</div>
 	</div>
 </div>
 <script type="text/javascript">
 $(document).on('click', '.submit-btn', function(event){
-alert("here")
 c = $("#add_testimonial").find("input")
 $.each(c, function(i,v){
 	ele_name = $(v).attr('name')
 	switch(ele_name) {
 	case 'email':
-alert("heretoo")
-alert($(v).val())
 		if($("input[type=hidden][name='all_emails']").val().indexOf($(v).val()) != -1){
-alert("heretoomuch")
 			// Email exists
 			$(v).append("<p>Email already exists")
 			return false

@@ -30,3 +30,14 @@ def get_testimonial_emails():
     all_emails = Testimonial.get_email_list()
     # print "\n AALL EMAILS: ", all_emails
     return all_emails
+
+@register.assignment_tag
+def get_appt_book_form_and_url():
+    args = {}
+    from dental_studio.forms import AppointmentForm
+    form = AppointmentForm()
+    args['form'] = form
+    print(form)
+    print("*"*80)
+    return form, 'appointment:create'
+

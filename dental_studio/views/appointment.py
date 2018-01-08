@@ -25,6 +25,7 @@ def load_table(request):
 
 def create_edit(request, appoinment_id=None):
     print("*"*80)
+    print "\nIN AP CR"
     args = {}
     if request.method == 'POST':
         form = AppointmentForm(request.POST)

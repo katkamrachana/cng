@@ -24,20 +24,81 @@ body {
 	#home{
 		padding-top: 20%;
 	}
+	.book_appt_iframe{
+		padding-bottom: 210%;
+	}
 }
 
 @media screen and (max-width: 560px) and (min-width: 461px){
 	#home{
 		padding-top: 6%;
 	}
+	.book_appt_iframe{
+		padding-bottom: 180%;
+	}
+
 }
 
-@media screen and (max-width: 800px) and (min-width: 561px){
+@media screen and (max-width: 700px) and (min-width: 561px){
 	#home{
 		padding-top: 6%;
 	}
+	.book_appt_iframe{
+		padding-bottom: 144%;
+	}
+
+}
+
+@media screen and (max-width: 800px) and (min-width: 701px){
+	#home{
+		padding-top: 6%;
+	}
+	.book_appt_iframe{
+		padding-bottom: 124%;
+	}
+
+}
+
+@media screen and (max-width: 1140px) and (min-width: 801px){
+	#home{
+		padding-top: 6%;
+	}
+	.book_appt_iframe{
+		padding-bottom: 124%;
+	}
+
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1141px){
+	.book_appt_iframe{
+		padding-bottom: 74%;
+	}
+}
+
+@media screen and (max-width: 1620px) and (min-width: 1441px){
+	.book_appt_iframe{
+		padding-bottom: 64%;
+	}
+
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1621px){
+	.book_appt_iframe{
+		padding-bottom: 50%;
+	}
+}
+
+@media screen and (min-width: 1921px){
+	.book_appt_iframe{
+		padding-bottom: 42%;
+	}
+
 }
 
 .embed-responsive-100x400px{
   padding-bottom: 400px;
+}
+
+#add_testimonial {
+    @include 'style.css';
 }

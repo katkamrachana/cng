@@ -1,3 +1,5 @@
+
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +11,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="/static/dental_studio/css/cdac2.css">
-
 
 </head>
 <!-- NAVBAR
@@ -63,9 +64,6 @@
       </div>
 
 
-    <!-- Marketing messaging and featurettes
-      ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
 
       <div class="container">
         <!-- Three columns of text below the carousel -->
@@ -85,11 +83,12 @@
         <div class="row featurette marketing" id="testimonials">
           <h3 class="featurette-heading">Testimonials</h3>
           <div class="col-lg-8 col-md-7" style="height: 450px; overflow-x: auto; overflow-y: auto; overflow-x: hidden;">
-          {% include "dental_studio/testimonials.html" %}
+            {% include "dental_studio/testimonials.html" %}
           </div>
           <div class="col-lg-4 col-md-5" >
-          {% include "dental_studio/add_testimonial.html" %}
-
+            <div class="embed-responsive embed-responsive-100x400px">
+              <iframe src="{% url 'testimonial:testgame' %}" style='width:102%; height:112%;' frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
           </div>
         </div>
         <hr class="featurette-divider">

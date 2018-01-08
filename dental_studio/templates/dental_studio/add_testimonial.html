@@ -2,13 +2,18 @@
 {% get_form "Testimonial" as formObj %}
 {% load material_form %} 
 {% load staticfiles material_form %}
+{% include 'material/includes/material_css.html' %}
+  <script src="{% static 'material/js/jquery.js' %}"></script>
+{% include 'material/includes/material_js.html' %}
+
 <style type="text/css">
-	.submit-btn{
-		color: #257aa1;
-		background-color: #f8f8f8;
-	}
+  .submit-btn{
+    color: #257aa1;
+    background-color: #f8f8f8;
+  }
 
 </style>
+
 <div class="form-container" id="add_testimonial">
   <h5>Share your story</h5>
   <div class="row">
