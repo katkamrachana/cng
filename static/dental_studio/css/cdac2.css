@@ -19,3 +19,25 @@ body {
 	font-weight: bold;
 	color: red !important;
 }
+
+@media screen and (max-width: 460px) and (min-width: 320px) {
+	#home{
+		padding-top: 20%;
+	}
+}
+
+@media screen and (max-width: 560px) and (min-width: 461px){
+	#home{
+		padding-top: 6%;
+	}
+}
+
+@media screen and (max-width: 800px) and (min-width: 561px){
+	#home{
+		padding-top: 6%;
+	}
+}
+
+.embed-responsive-100x400px{
+  padding-bottom: 400px;
+}
