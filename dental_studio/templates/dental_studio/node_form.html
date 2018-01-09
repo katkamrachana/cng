@@ -1,0 +1,25 @@
+{% load get_appt_book_form_and_url from cdac_tags %}
+{% get_appt_book_form_and_url as form_with_url %}
+{% load material_form %} 
+{% load staticfiles material_form %}
+{% include 'material/includes/material_css.html' %}
+<script src="{% static 'material/js/jquery.js' %}"></script>
+{% include 'material/includes/material_js.html' %}
+
+<div class="form-container" style="margin: 100px 0px 0px 75px; width: 50%;">
+	<div class="row">
+		{% if "appointment" in form_with_url.1 %}
+		<div class="col-lg-4 col-sm-4">
+			<h5 style="display: inline-block;">Request for Appointment</h5>
+		</div>
+		{% endif %}
+		<div class="col-lg-8 col-sm-8">
+
+			{{ form_with_url.0.non_field_errors }}
+			<form method="POST" class="viewform" action="{% url form_with_url.1 %}">{% csrf_token %}
+				{% form form=form_with_url.0 %}{% endform %}
+				<button type="submit" name="_submit" class="btn btn-primary btn-lg">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
