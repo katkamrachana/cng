@@ -58,7 +58,7 @@ class Appointment(models.Model):
     email = models.EmailField(unique=True)
     address = models.CharField(max_length=300, blank=False)
     age = models.IntegerField(default=0, blank=False)
-    treatment = models.ForeignKey(Treatment)
+    # treatment = models.ForeignKey(Treatment)
     GENDER_CHOICES = (
         ('M', 'Male'),
         ('F', 'Female'),

@@ -8,7 +8,8 @@ class PatientForm(forms.ModelForm):
 class AppointmentForm(forms.ModelForm):
     class Meta:
         model = Appointment
-        fields = ('datetime', 'name', 'contact', 'email', 'address', 'age', 'treatment', 'gender')
+        # fields = ('datetime', 'name', 'contact', 'email', 'address', 'age', 'treatment', 'gender')
+        fields = ('datetime', 'name', 'contact', 'email', 'address', 'age', 'gender')
 
 class VisitForm(forms.ModelForm):
     class Meta:
