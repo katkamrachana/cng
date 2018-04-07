@@ -11,7 +11,7 @@ register = Library()
 
 @register.assignment_tag
 def get_testimonials():
-    t = Testimonial.testimonials().order_by('date')
+    t = Testimonial.testimonials().order_by('created_date')
     return t
 
 @register.inclusion_tag('dental_studio/add_testimonial.html', takes_context=True)
