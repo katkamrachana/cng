@@ -37,7 +37,7 @@ def create_edit(request, testimonial_id=None):
                 testimonial_obj = form.save()
                 testimonial_id = testimonial_obj.pk
                 # if set_date:
-                #     testimonial_obj.created_date = datetime.datetime.now()
+                testimonial_obj.created_date = datetime.datetime.now()
                 if request.user.is_superuser:
                     testimonial_obj.status = "P"
                 # print "\n instance: ", new_appt.pk
