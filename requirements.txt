@@ -1,3 +1,4 @@
+psycopg2==2.7.3.1
 bleach==1.4.3
 dj-database-url==0.3.0
 dj-static==0.0.6
@@ -8,7 +9,6 @@ gunicorn==19.6.0
 html5lib==0.9999999
 Markdown==2.6.6
 Pillow==3.3.0
-psycopg2==2.6.1
 python-decouple==3.0
 pytz==2017.3
 six==1.11.0
